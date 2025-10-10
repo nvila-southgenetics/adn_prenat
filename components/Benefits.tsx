@@ -26,7 +26,6 @@ const benefits = [
   {
     icon: UserCheck,
     title: 'Acompañamiento humano',
-    title: 'Acompañamiento humano',
     description: 'Soporte personalizado durante todo el proceso',
     color: 'from-orange-500 to-orange-600'
   },
