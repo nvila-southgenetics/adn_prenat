@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, Send, CheckCircle, AlertCircle, MessageCircle } from 'lucide-react'
 
-export default function Contact() {
+export default function ContactCo() {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -24,29 +24,25 @@ export default function Contact() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // Validar datos
     if (!formData.nombre || !formData.email || !formData.telefono || !formData.semana) {
       setSubmitStatus('error')
       setIsSubmitting(false)
       return
     }
 
-    // Simular envío
     try {
       await new Promise(resolve => setTimeout(resolve, 2000))
       setSubmitStatus('success')
-      
-      // Redirigir a WhatsApp con mensaje predefinido
-      const mensaje = `Hola, me interesa la prueba de paternidad prenatal. Mi información:
+
+  const mensaje = `Hola, me interesa la prueba de paternidad prenatal en Cali. Mi información:
 - Nombre: ${formData.nombre}
 - Email: ${formData.email}
 - Teléfono: ${formData.telefono}
 - Semana de gestación: ${formData.semana}`
 
-      const whatsappUrl = `https://wa.me/13055550198?text=${encodeURIComponent(mensaje)}`
+      const whatsappUrl = `https://wa.me/573005550198?text=${encodeURIComponent(mensaje)}`
       window.open(whatsappUrl, '_blank')
-      
-      // Limpiar formulario
+
       setFormData({ nombre: '', email: '', telefono: '', semana: '' })
     } catch (error) {
       setSubmitStatus('error')
@@ -66,15 +62,14 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Contacto
+            Conversemos
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Estamos aquí para ayudarte. <span className="font-bold text-green-600">Disponibles 24/7</span> en cualquier huso horario.
+            Estamos listos para acompañarte desde nuestro laboratorio en Cali. <span className="font-bold text-green-600">Disponibles 24/7</span> para resolver cada duda y coordinar tu proceso.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Formulario de contacto */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -85,7 +80,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Solicita información
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="nombre" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -131,7 +126,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    placeholder="+1 305 555 0198"
+                    placeholder="+57 300 555 0198"
                   />
                 </div>
 
@@ -156,7 +151,6 @@ export default function Contact() {
                   </select>
                 </div>
 
-                {/* Estado del envío */}
                 {submitStatus === 'success' && (
                   <div className="flex items-center space-x-2 text-green-600 bg-green-50 p-3 rounded-lg">
                     <CheckCircle className="w-5 h-5" />
@@ -192,7 +186,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Información de contacto */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -204,7 +197,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Información de contacto
               </h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-ocean-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -212,7 +205,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Ubicación</h4>
-                    <p className="text-gray-600">Miami, Estados Unidos</p>
+                    <p className="text-gray-600">Cali, Colombia</p>
                   </div>
                 </div>
 
@@ -222,7 +215,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Teléfono</h4>
-                    <p className="text-gray-600">+1 305 555 0198</p>
+                    <p className="text-gray-600">+57 601 508 1234</p>
                   </div>
                 </div>
 
@@ -232,20 +225,19 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">contact@testadnprenatal.com</p>
+                    <p className="text-gray-600">contacto@testadnprenatal.com</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Botón de WhatsApp */}
             <div className="bg-gradient-to-r from-accent-500 to-accent-600 rounded-2xl p-8 text-white">
               <h4 className="text-xl font-bold mb-4">¿Prefieres WhatsApp?</h4>
               <p className="text-accent-100 mb-6">
-                Chatea con nosotros directamente y recibe respuestas inmediatas a tus preguntas.
+                Escríbenos y coordinamos la toma de muestra en la ciudad que necesites. Respondemos rapidísimo.
               </p>
               <a
-                href="https://wa.me/13055550198"
+                href="https://wa.me/573005550198"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary bg-white text-accent-600 hover:bg-gray-100 inline-flex items-center"
@@ -260,3 +252,4 @@ export default function Contact() {
     </section>
   )
 }
+

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { Menu, X, Phone, Mail } from 'lucide-react'
 import { smoothScrollTo } from '@/utils/smoothScroll'
 
-export default function Header() {
+export default function HeaderCo() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -27,39 +27,35 @@ export default function Header() {
         ? 'bg-white/95 backdrop-blur-md shadow-lg' 
         : 'bg-white shadow-sm'
     }`}>
-      {/* Barra superior con contacto */}
       <div className="bg-ocean-700 text-white py-2">
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 305 555 0198</span>
+                <span>+57 601 508 1234</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>contact@testadnprenatal.com</span>
+                <span>contacto@testadnprenatal.com</span>
               </div>
             </div>
             <div className="hidden md:block">
-              <span className="text-ocean-100">Atención 24/7</span>
+              <span className="text-ocean-100">Laboratorio certificado en Cali</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Navegación principal */}
       <nav className="py-4">
         <div className="container-custom">
           <div className="flex justify-between items-center">
-            {/* Logo */}
             <div className="flex items-center">
               <h1 className="text-2xl font-bold gradient-text">
-                Test ADN Prenatal
+                Test ADN Prenatal Colombia
               </h1>
             </div>
 
-            {/* Menú desktop */}
             <div className="hidden lg:flex items-center space-x-8">
               <button 
                 onClick={() => scrollToSection('inicio')}
@@ -83,16 +79,16 @@ export default function Header() {
                 onClick={() => scrollToSection('faqs')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
-                FAQs
+                Preguntas
               </button>
               <button 
                 onClick={() => scrollToSection('contacto')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
-                Contacto
+                Contáctanos
               </button>
               <a
-                href="https://wa.me/13055550198"
+                href="https://wa.me/573005550198"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
@@ -101,7 +97,6 @@ export default function Header() {
               </a>
             </div>
 
-            {/* Botón menú móvil */}
             <button
               className="lg:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -114,7 +109,6 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Menú móvil */}
           {isMenuOpen && (
             <div className="lg:hidden mt-4 py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-4">
@@ -140,16 +134,16 @@ export default function Header() {
                   onClick={() => scrollToSection('faqs')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
-                  FAQs
+                  Preguntas
                 </button>
                 <button 
                   onClick={() => scrollToSection('contacto')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
-                  Contacto
+                  Contáctanos
                 </button>
                 <a
-                  href="https://wa.me/13055550198"
+                  href="https://wa.me/573005550198"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary text-center"
@@ -164,3 +158,4 @@ export default function Header() {
     </header>
   )
 }
+

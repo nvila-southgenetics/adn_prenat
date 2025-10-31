@@ -20,7 +20,7 @@ const benefits = [
   {
     icon: Clock,
     title: 'Resultados rápidos',
-    description: 'Entrega de resultados en 5-7 días hábiles',
+    description: 'Entrega de resultados en 10 días hábiles',
     color: 'from-purple-500 to-purple-600'
   },
   {
@@ -110,8 +110,8 @@ export default function Benefits() {
               <div className="text-ocean-100">Precisión garantizada</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">5-7</div>
-              <div className="text-ocean-100">Días para resultados</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">10</div>
+              <div className="text-ocean-100">Días hábiles para resultados</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">24/7</div>

@@ -8,39 +8,31 @@ import { smoothScrollTo } from '@/utils/smoothScroll'
 const faqs = [
   {
     question: '¿Qué tan precisa es la prueba?',
-    answer: 'Nuestra prueba de paternidad prenatal tiene una precisión del 99.9%, utilizando tecnología de vanguardia y análisis de ADN fetal libre en sangre materna. Es la misma tecnología utilizada en hospitales de primer nivel mundial.'
+    answer: 'La prueba de paternidad prenatal que realizamos en Colombia tiene una precisión del 99.9%. Utilizamos la misma tecnología de laboratorio certificada que se emplea en clínicas de referencia mundial.'
   },
   {
     question: '¿Cuánto tardan los resultados?',
-    answer: 'Los resultados están listos entre 5 a 7 días hábiles después de recibir la muestra en nuestro laboratorio. Te notificaremos inmediatamente cuando estén disponibles y los enviaremos de forma segura y confidencial.'
+    answer: 'Entre 5 y 7 días hábiles desde que recibimos la muestra en el laboratorio aliado DDC. Te avisamos apenas estén listos y los enviamos de manera segura y confidencial.'
   },
   {
     question: '¿Es segura para el bebé?',
-    answer: 'Sí, es completamente segura. Solo requiere una muestra de sangre de la madre, sin ningún riesgo para el bebé o la madre. No es invasiva y no afecta el desarrollo del feto de ninguna manera.'
+    answer: 'Sí. Solo requiere una muestra de sangre de la mamá, no es invasiva y no implica riesgos para el bebé. Puedes realizarla desde la semana 8 de embarazo.'
   },
   {
-    question: '¿Cómo se paga?',
-    answer: 'Aceptamos pagos en línea con tarjeta de crédito o débito a través de Stripe, así como transferencias bancarias. También ofrecemos planes de pago flexibles para tu comodidad.'
+    question: '¿Cómo puedo pagar?',
+    answer: 'Aceptamos transferencias bancarias, PSE, tarjetas débito y crédito, y opciones como Nequi o Daviplata. También contamos con planes de pago flexibles.'
   },
   {
-    question: '¿Puedo hacerla en cualquier semana de embarazo?',
-    answer: 'La prueba se puede realizar a partir de la semana 8 de gestación, cuando ya hay suficiente ADN fetal libre en la sangre materna. No hay límite superior, se puede realizar en cualquier momento del embarazo.'
-  },
-  {
-    question: '¿Los resultados son confidenciales?',
-    answer: 'Absolutamente. Mantenemos la máxima confidencialidad en todos los aspectos del proceso. Los resultados solo se entregan a la persona autorizada y utilizamos protocolos de seguridad de nivel hospitalario.'
+    question: '¿Atienden fuera de Bogotá?',
+    answer: 'Claro. Coordinamos la toma de muestra en Medellín, Cali, Barranquilla, Bucaramanga y cualquier ciudad del país. También ofrecemos servicio a domicilio dependiendo de la zona.'
   },
   {
     question: '¿Qué incluye el precio?',
-    answer: 'El precio incluye la toma de muestra, análisis de laboratorio, certificado de resultados, envío seguro de resultados y soporte durante todo el proceso. No hay costos ocultos.'
-  },
-  {
-    question: '¿Puedo hacer la prueba si soy menor de edad?',
-    answer: 'Sí, pero necesitamos el consentimiento de un padre, madre o tutor legal. Te guiaremos en todo el proceso legal necesario para realizar la prueba de forma segura y legal.'
+    answer: 'Incluye la toma de muestras, el análisis de laboratorio, el informe con validez legal, la entrega segura de resultados y el acompañamiento de nuestros especialistas en Colombia.'
   }
 ]
 
-export default function FAQ() {
+export default function FAQCo() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const toggleFAQ = (index: number) => {
@@ -61,7 +53,7 @@ export default function FAQ() {
             Preguntas frecuentes
           </h2>
           <p className="text-xl text-ocean-100 max-w-3xl mx-auto">
-            Resolvemos las dudas más comunes sobre nuestra prueba de paternidad prenatal
+            Lo esencial sobre nuestra prueba de paternidad prenatal en Colombia
           </p>
         </motion.div>
 
@@ -113,7 +105,6 @@ export default function FAQ() {
           </div>
         </div>
 
-        {/* CTA adicional */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -128,14 +119,14 @@ export default function FAQ() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              ¿Tienes más preguntas?
+              ¿Necesitas más información?
             </h3>
             <p className="text-gray-600 mb-6">
-              Nuestro equipo de especialistas está disponible 24/7 para resolver todas tus dudas.
+              Escríbenos por WhatsApp y con gusto te acompañamos en lo que sigue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/13055550198"
+                href="https://wa.me/573005550198"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center justify-center"

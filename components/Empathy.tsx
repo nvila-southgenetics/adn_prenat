@@ -44,9 +44,9 @@ export default function Empathy() {
               className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl shadow-lg p-6"
             >
               <p className="text-gray-700 italic leading-relaxed">
-                "El equipo fue muy comprensivo y me explicaron todo el proceso. Me sentí acompañada en todo momento."
+                "El equipo fue muy comprensivo y me explicó cada paso. Sentí respaldo profesional y humano desde la primera llamada."
               </p>
-              <p className="text-gray-600 text-sm mt-3">— María, Ciudad de México</p>
+              <p className="text-gray-600 text-sm mt-3">— Laura, Miami, Estados Unidos</p>
             </motion.div>
           </motion.div>
 
@@ -78,7 +78,7 @@ export default function Empathy() {
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 Dudas, ansiedad, miedo al qué dirán… son emociones completamente normales cuando no hay claridad.
-                Lo importante es que hoy existen <span className="font-bold text-orange-600">opciones seguras, rápidas y confidenciales</span> para ayudarte a encontrar la tranquilidad que merecés.
+                Lo importante es que hoy existen <span className="font-bold text-orange-600">opciones seguras, rápidas y confidenciales</span> para ayudarte a recuperar la tranquilidad que necesitas.
               </motion.p>
             </div>
 
@@ -91,7 +91,7 @@ export default function Empathy() {
             >
               <p>
                 Cada historia es diferente, pero todas comparten algo en común: la necesidad de saber.
-                En SouthGenetics acompañamos a cientos de mujeres que, como vos, necesitan una respuesta clara sin poner en riesgo su embarazo.
+                En Test ADN Prenatal acompañamos a cientos de mujeres que, como tú, necesitan una respuesta clara sin poner en riesgo su embarazo.
               </p>
               
               <p>

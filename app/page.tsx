@@ -1,5 +1,7 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import Allies from '@/components/Allies'
+import Experience from '@/components/Experience'
 import Empathy from '@/components/Empathy'
 import HowItWorks from '@/components/HowItWorks'
 import Benefits from '@/components/Benefits'
@@ -12,7 +14,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
+      <Allies />
       <Empathy />
+      <Experience />
       <HowItWorks />
       <Benefits />
       <FAQ />
