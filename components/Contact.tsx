@@ -43,7 +43,7 @@ export default function Contact() {
 - Teléfono: ${formData.telefono}
 - Semana de gestación: ${formData.semana}`
 
-      const whatsappUrl = `https://wa.me/13055550198?text=${encodeURIComponent(mensaje)}`
+      const whatsappUrl = `https://wa.me/573173644276?text=${encodeURIComponent(mensaje)}`
       window.open(whatsappUrl, '_blank')
       
       // Limpiar formulario
@@ -131,7 +131,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    placeholder="+1 305 555 0198"
+                          placeholder="+57 317 364 4276"
                   />
                 </div>
 
@@ -222,7 +222,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Teléfono</h4>
-                    <p className="text-gray-600">+1 305 555 0198</p>
+                    <p className="text-gray-600">+57 317 364 4276</p>
                   </div>
                 </div>
 
@@ -232,7 +232,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">contact@testadnprenatal.com</p>
+                    <p className="text-gray-600">cjflorez@southgenetics.com</p>
                   </div>
                 </div>
               </div>
@@ -245,7 +245,7 @@ export default function Contact() {
                 Chatea con nosotros directamente y recibe respuestas inmediatas a tus preguntas.
               </p>
               <a
-                href="https://wa.me/13055550198"
+                href="https://wa.me/573173644276"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary bg-white text-accent-600 hover:bg-gray-100 inline-flex items-center"

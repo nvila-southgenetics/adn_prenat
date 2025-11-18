@@ -82,7 +82,7 @@ export default function HeroCo() {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <a
-                href="https://wa.me/573005550198"
+                href="https://wa.me/573173644276"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-center group"

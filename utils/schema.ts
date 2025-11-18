@@ -8,16 +8,16 @@ export const organizationSchema = {
   "description": "Pruebas de paternidad prenatal no invasivas con resultados certificados. Tecnología de vanguardia para familias en todo el mundo.",
   "url": "https://paternidadprenatal.com",
   "logo": "https://paternidadprenatal.com/imgs/logo.png",
-  "telephone": "+1-305-555-0198",
-  "email": "contact@testadnprenatal.com",
+  "telephone": "+57-317-364-4276",
+  "email": "cjflorez@southgenetics.com",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US",
-    "addressLocality": "Miami",
-    "addressRegion": "FL"
+    "addressCountry": "UY",
+    "addressLocality": "Montevideo",
+    "addressRegion": "Montevideo"
   },
   "sameAs": [
-    "https://wa.me/13055550198"
+    "https://wa.me/573173644276"
   ],
   "priceRange": "$1,490 USD",
   "medicalSpecialty": "Genetic Testing",
@@ -35,8 +35,8 @@ export const organizationSchemaColombia = {
   "description": "Pruebas de paternidad prenatal no invasivas en Colombia. Laboratorio certificado en Cali. Resultados en 10 días hábiles.",
   "url": "https://paternidadprenatal.com/co",
   "logo": "https://paternidadprenatal.com/imgs/logo.png",
-  "telephone": "+57-601-508-1234",
-  "email": "contacto@testadnprenatal.com",
+  "telephone": "+57-317-364-4276",
+  "email": "cjflorez@southgenetics.com",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "CO",
@@ -44,7 +44,7 @@ export const organizationSchemaColombia = {
     "addressRegion": "Valle del Cauca"
   },
   "sameAs": [
-    "https://wa.me/573005550198"
+    "https://wa.me/573173644276"
   ],
   "priceRange": "$1,490 USD",
   "medicalSpecialty": "Genetic Testing",
@@ -120,8 +120,8 @@ export const localBusinessSchemaColombia = {
   "@type": "LocalBusiness",
   "name": "Paternidad Prenatal Colombia",
   "image": "https://southgenetics.com/imgs/logo.png",
-  "telephone": "+57-601-508-1234",
-  "email": "contacto@testadnprenatal.com",
+  "telephone": "+57-317-364-4276",
+  "email": "cjflorez@southgenetics.com",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "CO",

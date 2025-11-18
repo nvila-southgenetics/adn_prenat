@@ -233,7 +233,7 @@ export default function HowItWorksCo() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/573005550198"
+                href="https://wa.me/573173644276"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors inline-flex items-center justify-center shadow-lg text-lg"

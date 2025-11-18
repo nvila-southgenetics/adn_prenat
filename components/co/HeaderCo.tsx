@@ -52,11 +52,11 @@ export default function HeaderCo() {
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>+57 601 508 1234</span>
+                  <span>+57 317 364 4276</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
-                  <span>contacto@testadnprenatal.com</span>
+                  <span>cjflorez@southgenetics.com</span>
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function HeaderCo() {
                 Contáctanos
               </button>
               <a
-                href="https://wa.me/573005550198"
+                href="https://wa.me/573173644276"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
@@ -177,7 +177,7 @@ export default function HeaderCo() {
                   Contáctanos
                 </button>
                 <a
-                  href="https://wa.me/573005550198"
+                  href="https://wa.me/573173644276"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary text-center"

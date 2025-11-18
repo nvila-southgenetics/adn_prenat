@@ -40,7 +40,7 @@ export default function ContactCo() {
 - Teléfono: ${formData.telefono}
 - Semana de gestación: ${formData.semana}`
 
-      const whatsappUrl = `https://wa.me/573005550198?text=${encodeURIComponent(mensaje)}`
+      const whatsappUrl = `https://wa.me/573173644276?text=${encodeURIComponent(mensaje)}`
       window.open(whatsappUrl, '_blank')
 
       setFormData({ nombre: '', email: '', telefono: '', semana: '' })
@@ -215,7 +215,7 @@ export default function ContactCo() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Teléfono</h4>
-                    <p className="text-gray-600">+57 601 508 1234</p>
+                    <p className="text-gray-600">+57 317 364 4276</p>
                   </div>
                 </div>
 
@@ -225,7 +225,7 @@ export default function ContactCo() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">contacto@testadnprenatal.com</p>
+                    <p className="text-gray-600">cjflorez@southgenetics.com</p>
                   </div>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export default function ContactCo() {
                 Escríbenos y coordinamos la toma de muestra en la ciudad que necesites. Respondemos rapidísimo.
               </p>
               <a
-                href="https://wa.me/573005550198"
+                href="https://wa.me/573173644276"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary bg-white text-accent-600 hover:bg-gray-100 inline-flex items-center"
