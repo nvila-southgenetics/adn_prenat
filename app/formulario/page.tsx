@@ -2,13 +2,14 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Check, ChevronRight, Phone, User, Mail, Calendar, FileText, X } from 'lucide-react'
+import { Check, ChevronRight, Phone, User, Mail, Calendar, FileText, X, MapPin } from 'lucide-react'
 import Image from 'next/image'
 
 export default function FormularioPage() {
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     telefono: '',
+    pais: '',
     acceptSMS: false,
     nombre: '',
     apellido: '',
@@ -32,7 +33,7 @@ export default function FormularioPage() {
 
   const handleStep1Submit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (formData.telefono && formData.acceptSMS) {
+    if (formData.telefono && formData.pais && formData.acceptSMS) {
       setStep(2)
     }
   }
@@ -56,6 +57,7 @@ export default function FormularioPage() {
           apellido: formData.apellido,
           email: formData.email,
           telefono: formData.telefono,
+          pais: formData.pais,
           semana: formData.semana,
           acceptSMS: formData.acceptSMS,
           acceptInfo: formData.acceptInfo
@@ -137,7 +139,7 @@ export default function FormularioPage() {
                     Comencemos
                   </h1>
                   <p className="text-gray-600 mb-8">
-                    Ingresa tu número de teléfono para continuar
+                    Ingresa tu número de teléfono y país para continuar
                   </p>
 
                   <form onSubmit={handleStep1Submit} className="space-y-6">
@@ -160,6 +162,41 @@ export default function FormularioPage() {
                       </div>
                     </div>
 
+                    <div>
+                      <label htmlFor="pais" className="block text-sm font-semibold text-gray-700 mb-2">
+                        País *
+                      </label>
+                      <div className="relative">
+                        <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <select
+                          id="pais"
+                          name="pais"
+                          value={formData.pais}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-ocean-500 focus:border-ocean-500 transition-all duration-200 text-lg appearance-none bg-white"
+                        >
+                          <option value="">Selecciona tu país</option>
+                          <option value="Estados Unidos">Estados Unidos</option>
+                          <option value="México">México</option>
+                          <option value="Colombia">Colombia</option>
+                          <option value="Argentina">Argentina</option>
+                          <option value="Chile">Chile</option>
+                          <option value="Perú">Perú</option>
+                          <option value="Ecuador">Ecuador</option>
+                          <option value="Venezuela">Venezuela</option>
+                          <option value="Panamá">Panamá</option>
+                          <option value="Costa Rica">Costa Rica</option>
+                          <option value="Guatemala">Guatemala</option>
+                          <option value="República Dominicana">República Dominicana</option>
+                          <option value="España">España</option>
+                          <option value="Brasil">Brasil</option>
+                          <option value="Canadá">Canadá</option>
+                          <option value="Otro">Otro</option>
+                        </select>
+                      </div>
+                    </div>
+
                     <div className="flex items-start gap-3">
                       <input
                         type="checkbox"
@@ -177,7 +214,7 @@ export default function FormularioPage() {
 
                     <button
                       type="submit"
-                      disabled={!formData.telefono || !formData.acceptSMS}
+                      disabled={!formData.telefono || !formData.pais || !formData.acceptSMS}
                       className="w-full bg-ocean-600 hover:bg-ocean-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg inline-flex items-center justify-center gap-2"
                     >
                       Continuar
