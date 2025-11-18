@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: '¿Cuánto tardan los resultados?',
-    answer: 'Entre 5 y 7 días hábiles desde que recibimos la muestra en el laboratorio aliado DDC. Te avisamos apenas estén listos y los enviamos de manera segura y confidencial.'
+    answer: 'Aproximadamente 10 días hábiles desde que recibimos la muestra en el laboratorio aliado DDC. Te avisamos apenas estén listos y los enviamos de manera segura y confidencial.'
   },
   {
     question: '¿Es segura para el bebé?',
@@ -21,10 +21,6 @@ const faqs = [
   {
     question: '¿Cómo puedo pagar?',
     answer: 'Aceptamos transferencias bancarias, PSE, tarjetas débito y crédito, y opciones como Nequi o Daviplata. También contamos con planes de pago flexibles.'
-  },
-  {
-    question: '¿Atienden fuera de Bogotá?',
-    answer: 'Claro. Coordinamos la toma de muestra en Medellín, Cali, Barranquilla, Bucaramanga y cualquier ciudad del país. También ofrecemos servicio a domicilio dependiendo de la zona.'
   },
   {
     question: '¿Qué incluye el precio?',
@@ -49,7 +45,7 @@ export default function FAQCo() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Preguntas frecuentes
           </h2>
           <p className="text-xl text-ocean-100 max-w-3xl mx-auto">
@@ -134,15 +130,15 @@ export default function FAQCo() {
                 <HelpCircle className="w-5 h-5 mr-2" />
                 Consultar por WhatsApp
               </a>
-              <button
-                onClick={() => smoothScrollTo('contacto', 1200)}
+              <a
+                href="/co/formulario"
                 className="btn-outline inline-flex items-center justify-center"
               >
                 Contáctanos
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </motion.div>

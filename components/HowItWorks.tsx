@@ -11,7 +11,7 @@ const steps = [
     icon: MessageCircle,
     title: 'Contacto inicial',
     description: 'Comunicate con nosotros por WhatsApp o completa nuestro formulario web. Estamos disponibles cualquier día a cualquier hora. Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.',
-    image: '/imgs/contacto-inicial.png',
+    image: '/imgs/contacto-inicialardo.png',
     imageAlt: 'Contacto por WhatsApp',
     color: 'from-blue-500 to-cyan-500',
     position: 'left' // imagen a la izquierda
@@ -21,7 +21,7 @@ const steps = [
     icon: Droplets,
     title: 'Toma de muestra',
     description: 'Realizamos una simple extracción de sangre de la madre y un hisopo bucal del posible padre. Es un proceso rápido, sin dolor y completamente seguro para el bebé en desarrollo.',
-    image: '/imgs/muestra 2.png',
+    image: '/imgs/isopado.png',
     imageAlt: 'Toma de muestra',
     color: 'from-purple-500 to-pink-500',
     position: 'right' // imagen a la derecha
@@ -29,7 +29,7 @@ const steps = [
   {
     number: '03',
     icon: FileCheck,
-    title: 'Resultados confiables',
+    title: 'Resultados Claros',
     description: 'En 10 días hábiles recibirás tus resultados con 99.9% de precisión. La entrega es totalmente confidencial y te ofrecemos soporte profesional para interpretar los resultados.',
     image: '/imgs/resultados.png',
     imageAlt: 'Resultados del test',
@@ -50,7 +50,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-20 space-y-4"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
             ¿Cómo <span className="text-ocean-300">funciona?</span>
           </h2>
           <p className="text-xl md:text-2xl text-ocean-100 max-w-3xl mx-auto">
@@ -89,14 +89,6 @@ export default function HowItWorks() {
                             className="w-full h-auto object-cover"
                           />
                           <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-10`}></div>
-                          <div className="mt-6 flex justify-center">
-                            <button
-                              onClick={() => smoothScrollTo('contacto', 1200)}
-                              className="btn-secondary inline-flex items-center gap-2 px-6 py-3 text-base"
-                            >
-                              ¡Contactate ahora!
-                            </button>
-                          </div>
                         </div>
                       </div>
 
@@ -126,14 +118,6 @@ export default function HowItWorks() {
                               step.description
                             )}
                           </p>
-                          <div className="mt-6 flex justify-center">
-                            <button
-                              onClick={() => smoothScrollTo('contacto', 1200)}
-                              className="btn-secondary inline-flex.items-center gap-2 px-6 py-3 text-base"
-                            >
-                              ¡Contactate ahora!
-                            </button>
-                          </div>
                         </div>
                       </div>
                     </>
@@ -165,14 +149,6 @@ export default function HowItWorks() {
                               step.description
                             )}
                           </p>
-                          <div className="mt-6 flex justify-center">
-                            <button
-                              onClick={() => smoothScrollTo('contacto', 1200)}
-                              className="btn-secondary inline-flex items-center gap-2 px-6 py-3 text-base"
-                            >
-                              ¡Contactate ahora!
-                            </button>
-                          </div>
                         </div>
                       </div>
 
@@ -252,14 +228,6 @@ export default function HowItWorks() {
                             step.description
                           )}
                         </p>
-                        <div className="mt-6 flex justify-center">
-                          <button
-                            onClick={() => smoothScrollTo('contacto', 1200)}
-                            className="btn-secondary inline-flex items-center gap-2 px-6 py-3 text-base"
-                          >
-                            Probar ahora
-                          </button>
-                        </div>
                       </div>
                     </div>
                 </div>
@@ -295,15 +263,15 @@ export default function HowItWorks() {
                 <MessageCircle className="w-6 h-6 mr-2" />
                 Contactar por WhatsApp
               </a>
-              <button 
-                onClick={() => smoothScrollTo('contacto', 1200)}
+              <a
+                href="/formulario"
                 className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center shadow-lg text-lg"
               >
                 Ir al formulario
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </motion.div>

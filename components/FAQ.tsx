@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: '¿Cuánto tardan los resultados?',
-    answer: 'Los resultados están listos entre 5 a 7 días hábiles después de recibir la muestra en nuestro laboratorio. Te notificaremos inmediatamente cuando estén disponibles y los enviaremos de forma segura y confidencial.'
+    answer: 'Los resultados están listos en aproximadamente 10 días hábiles después de recibir la muestra en nuestro laboratorio. Te notificaremos inmediatamente cuando estén disponibles y los enviaremos de forma segura y confidencial.'
   },
   {
     question: '¿Es segura para el bebé?',
@@ -57,7 +57,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Preguntas frecuentes
           </h2>
           <p className="text-xl text-ocean-100 max-w-3xl mx-auto">
@@ -131,7 +131,7 @@ export default function FAQ() {
               ¿Tienes más preguntas?
             </h3>
             <p className="text-gray-600 mb-6">
-              Nuestro equipo de especialistas está disponible 24/7 para resolver todas tus dudas.
+              Nuestro equipo de especialistas está disponible de lunes a viernes de 8:00 a 18:00 para resolver todas tus dudas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -143,15 +143,15 @@ export default function FAQ() {
                 <HelpCircle className="w-5 h-5 mr-2" />
                 Consultar por WhatsApp
               </a>
-              <button
-                onClick={() => smoothScrollTo('contacto', 1200)}
+              <a
+                href="/formulario"
                 className="btn-outline inline-flex items-center justify-center"
               >
                 Contáctanos
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </motion.div>

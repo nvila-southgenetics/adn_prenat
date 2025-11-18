@@ -69,7 +69,7 @@ export default function Contact() {
             Contacto
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Estamos aquí para ayudarte. <span className="font-bold text-green-600">Disponibles 24/7</span> en cualquier huso horario.
+            Estamos aquí para ayudarte. <span className="font-bold text-green-600">Lunes a viernes de 8:00 a 18:00</span>
           </p>
         </motion.div>
 

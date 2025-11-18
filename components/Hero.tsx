@@ -30,7 +30,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8 lg:pl-0 lg:pr-8 mt-16"
+            className="space-y-8 lg:pl-0 lg:pr-8 mt-24"
           >
             <div className="space-y-4">
               <motion.h1 
@@ -51,7 +51,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Precisa, segura y sin riesgos para la madre ni el bebé.
-                Resultados certificados internacionalmente en pocos días.
+                Resultados certificados internacionalmente rápidos, seguros y accesibles a partir de la semana 7 de embarazo.
               </motion.p>
             </div>
 
@@ -96,12 +96,12 @@ export default function Hero() {
                 <MessageCircle className="w-5 h-5 group-hover:animate-pulse" />
                 Hablar por WhatsApp
               </a>
-              <button 
-                onClick={() => smoothScrollTo('contacto', 1200)}
-                className="btn-outline border-ocean-600 text-ocean-600 hover:bg-ocean-600 hover:text-white"
+              <a
+                href="/formulario"
+                className="btn-outline border-ocean-600 text-ocean-600 hover:bg-ocean-600 hover:text-white text-center"
               >
                 Solicitar información
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 

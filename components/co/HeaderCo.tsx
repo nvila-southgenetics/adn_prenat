@@ -1,12 +1,15 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { Menu, X, Phone, Mail } from 'lucide-react'
 import { smoothScrollTo } from '@/utils/smoothScroll'
 
 export default function HeaderCo() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  const isHomePage = pathname === '/co'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,9 +19,13 @@ export default function HeaderCo() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    smoothScrollTo(sectionId, 1200)
-    setIsMenuOpen(false)
+  const handleNavClick = (sectionId: string) => {
+    if (isHomePage) {
+      smoothScrollTo(sectionId, 1200)
+      setIsMenuOpen(false)
+    } else {
+      window.location.href = `/co#${sectionId}`
+    }
   }
 
   return (
@@ -58,31 +65,37 @@ export default function HeaderCo() {
 
             <div className="hidden lg:flex items-center space-x-8">
               <button 
-                onClick={() => scrollToSection('inicio')}
+                onClick={() => handleNavClick('inicio')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
                 Inicio
               </button>
               <button 
-                onClick={() => scrollToSection('como-funciona')}
+                onClick={() => handleNavClick('como-funciona')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
                 Cómo funciona
               </button>
               <button 
-                onClick={() => scrollToSection('beneficios')}
+                onClick={() => handleNavClick('beneficios')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
                 Beneficios
               </button>
               <button 
-                onClick={() => scrollToSection('faqs')}
+                onClick={() => handleNavClick('faqs')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
                 Preguntas
               </button>
+              <a
+                href="/co/sobre-nosotros"
+                className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
+              >
+                Sobre nosotros
+              </a>
               <button 
-                onClick={() => scrollToSection('contacto')}
+                onClick={() => handleNavClick('contacto')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
                 Contáctanos
@@ -113,31 +126,37 @@ export default function HeaderCo() {
             <div className="lg:hidden mt-4 py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-4">
                 <button 
-                  onClick={() => scrollToSection('inicio')}
+                  onClick={() => handleNavClick('inicio')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
                   Inicio
                 </button>
                 <button 
-                  onClick={() => scrollToSection('como-funciona')}
+                  onClick={() => handleNavClick('como-funciona')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
                   Cómo funciona
                 </button>
                 <button 
-                  onClick={() => scrollToSection('beneficios')}
+                  onClick={() => handleNavClick('beneficios')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
                   Beneficios
                 </button>
                 <button 
-                  onClick={() => scrollToSection('faqs')}
+                  onClick={() => handleNavClick('faqs')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
                   Preguntas
                 </button>
+                <a
+                  href="/co/sobre-nosotros"
+                  className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
+                >
+                  Sobre nosotros
+                </a>
                 <button 
-                  onClick={() => scrollToSection('contacto')}
+                  onClick={() => handleNavClick('contacto')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
                   Contáctanos

@@ -65,7 +65,7 @@ export default function ContactCo() {
             Conversemos
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Estamos listos para acompañarte desde nuestro laboratorio en Cali. <span className="font-bold text-green-600">Disponibles 24/7</span> para resolver cada duda y coordinar tu proceso.
+            Estamos listos para acompañarte desde nuestro laboratorio en Cali. <span className="font-bold text-green-600">Lunes a viernes de 8:00 a 18:00</span> para resolver cada duda y coordinar tu proceso.
           </p>
         </motion.div>
 
