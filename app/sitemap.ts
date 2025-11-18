@@ -1,64 +1,43 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://paternidadprenatal.com'
+  const now = new Date()
+  
   return [
     {
-      url: 'https://southgenetics.com/',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
+      url: baseUrl,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 1.0,
     },
     {
-      url: 'https://southgenetics.com/#como-funciona',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://southgenetics.com/#beneficios',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://southgenetics.com/#faqs',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: 'https://southgenetics.com/#contacto',
-      lastModified: new Date(),
+      url: `${baseUrl}/formulario`,
+      lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: 'https://southgenetics.com/co/',
-      lastModified: new Date(),
+      url: `${baseUrl}/sobre-nosotros`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/co`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/co/formulario`,
+      lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: 'https://southgenetics.com/co/#como-funciona',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: 'https://southgenetics.com/co/#beneficios',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: 'https://southgenetics.com/co/#faqs',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://southgenetics.com/co/#contacto',
-      lastModified: new Date(),
+      url: `${baseUrl}/co/sobre-nosotros`,
+      lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
     },

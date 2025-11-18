@@ -17,7 +17,7 @@ export default function Experience() {
           <div className="flex flex-col items-start gap-2">
             <Image
               src="/imgs/logoDDC.png"
-              alt="DDC - DNA Diagnostic Center"
+              alt="DDC DNA Diagnostic Center - Laboratorio certificado internacional para pruebas de paternidad prenatal"
               width={200}
               height={80}
               className="w-48 h-auto object-contain"

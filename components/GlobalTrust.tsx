@@ -14,18 +14,33 @@ export default function GlobalTrust() {
           transition={{ duration: 0.7 }}
           className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
         >
-          <div className="flex flex-col items-start gap-2">
-            <Image
-              src="/imgs/logoDDC.png"
-              alt="DDC - DNA Diagnostic Center"
-              width={200}
-              height={80}
-              className="w-48 h-auto object-contain"
-              priority
-            />
-            <span className="text-xs uppercase tracking-[0.2em] text-white/70 font-semibold">
-              DNA Diagnostic Center
-            </span>
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="flex flex-col items-start gap-2">
+              <Image
+                src="/imgs/logo.png"
+                alt="SouthGenetics - Test Paternidad Prenatal - Laboratorio de pruebas de paternidad prenatal certificado"
+                width={180}
+                height={60}
+                className="w-44 h-auto object-contain"
+                priority
+              />
+              <span className="text-xs uppercase tracking-[0.2em] text-white/70 font-semibold">
+                SouthGenetics
+              </span>
+            </div>
+            <div className="flex flex-col items-start gap-2">
+              <Image
+                src="/imgs/logoDDC.png"
+                alt="DDC DNA Diagnostic Center - Laboratorio aliado para pruebas de paternidad prenatal certificadas"
+                width={200}
+                height={80}
+                className="w-48 h-auto object-contain"
+                priority
+              />
+              <span className="text-xs uppercase tracking-[0.2em] text-white/70 font-semibold">
+                DNA Diagnostic Center
+              </span>
+            </div>
           </div>
 
           <div className="flex-1 text-center md:text-left">

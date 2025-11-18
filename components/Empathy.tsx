@@ -25,7 +25,7 @@ export default function Empathy() {
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/imgs/mujer-embarazada.png"
-                alt="Mujer embarazada tranquila y acompañada"
+                alt="Mujer embarazada realizando prueba de paternidad prenatal no invasiva - Test seguro desde semana 7"
                 width={600}
                 height={600}
                 className="w-full h-auto object-cover"

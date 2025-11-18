@@ -367,14 +367,45 @@ export default function FormularioPage() {
 
       {/* Right side - Image full height */}
       <div className="lg:w-1/2 relative min-h-[400px] lg:min-h-screen">
-        <Image
-          src="/imgs/bebe-en-hombros.png"
-          alt="Prueba de paternidad prenatal"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/20 to-transparent"></div>
+        <AnimatePresence mode="wait">
+          {step === 1 ? (
+            <motion.div
+              key="image-step1"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/imgs/embarazo.png"
+                alt="Mujer embarazada - Prueba de paternidad prenatal no invasiva desde semana 7"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/20 to-transparent"></div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="image-step2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/imgs/bebe-en-hombros.png"
+                alt="Formulario prueba de paternidad prenatal - Solicita tu test no invasivo desde semana 7 de embarazo"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/20 to-transparent"></div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Modal */}

@@ -12,7 +12,7 @@ const steps = [
     title: 'Contacto inicial',
     description: 'Escríbenos por WhatsApp o completa el formulario. Nuestro equipo en Cali te responde rapidísimo, resuelve tus dudas y coordina el siguiente paso desde nuestro laboratorio.',
     image: '/imgs/contacto-inicialardo.png',
-    imageAlt: 'Contacto por WhatsApp',
+    imageAlt: 'Contacto inicial prueba paternidad prenatal Colombia - Formulario y WhatsApp desde Cali',
     color: 'from-blue-500 to-cyan-500',
     position: 'left'
   },
@@ -22,7 +22,7 @@ const steps = [
     title: 'Toma de muestra',
     description: 'Coordinamos la toma de sangre de la mamá y el hisopo bucal del posible padre en nuestra sede de Cali o programamos la recolección donde la necesites. Es rápido, sin dolor y totalmente seguro.',
     image: '/imgs/isopado.png',
-    imageAlt: 'Toma de muestra',
+    imageAlt: 'Toma de muestra prueba paternidad prenatal Cali - Extracción de sangre e hisopado bucal',
     color: 'from-purple-500 to-pink-500',
     position: 'right'
   },
@@ -32,7 +32,7 @@ const steps = [
     title: 'Resultados Claros',
     description: 'En 10 días hábiles te compartimos los resultados con 99.9% de precisión. Los entregamos de forma confidencial y te acompañamos para interpretarlos.',
     image: '/imgs/resultados.png',
-    imageAlt: 'Resultados del test',
+    imageAlt: 'Resultados prueba paternidad prenatal Colombia - Certificado 99.9% precisión en 10 días hábiles',
     color: 'from-emerald-500 to-teal-500',
     position: 'left'
   }

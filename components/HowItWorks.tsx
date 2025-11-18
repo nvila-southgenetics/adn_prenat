@@ -12,7 +12,7 @@ const steps = [
     title: 'Contacto inicial',
     description: 'Comunicate con nosotros por WhatsApp o completa nuestro formulario web. Estamos disponibles cualquier día a cualquier hora. Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.',
     image: '/imgs/contacto-inicialardo.png',
-    imageAlt: 'Contacto por WhatsApp',
+    imageAlt: 'Contacto inicial para prueba de paternidad prenatal - Formulario y WhatsApp disponible 24/7',
     color: 'from-blue-500 to-cyan-500',
     position: 'left' // imagen a la izquierda
   },
@@ -22,7 +22,7 @@ const steps = [
     title: 'Toma de muestra',
     description: 'Realizamos una simple extracción de sangre de la madre y un hisopo bucal del posible padre. Es un proceso rápido, sin dolor y completamente seguro para el bebé en desarrollo.',
     image: '/imgs/isopado.png',
-    imageAlt: 'Toma de muestra',
+    imageAlt: 'Toma de muestra para prueba paternidad prenatal - Extracción de sangre materna e hisopado del padre',
     color: 'from-purple-500 to-pink-500',
     position: 'right' // imagen a la derecha
   },
@@ -32,7 +32,7 @@ const steps = [
     title: 'Resultados Claros',
     description: 'En 10 días hábiles recibirás tus resultados con 99.9% de precisión. La entrega es totalmente confidencial y te ofrecemos soporte profesional para interpretar los resultados.',
     image: '/imgs/resultados.png',
-    imageAlt: 'Resultados del test',
+    imageAlt: 'Resultados de prueba de paternidad prenatal - Certificado con 99.9% de precisión en 10 días hábiles',
     color: 'from-emerald-500 to-teal-500',
     position: 'left' // imagen a la izquierda
   }

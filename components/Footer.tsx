@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { MessageCircle, Shield, Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -21,9 +22,18 @@ export default function Footer() {
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <h3 className="text-2xl font-bold mb-4 gradient-text">
-              Test ADN Prenatal
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/imgs/logo.png"
+                alt="SouthGenetics - Test Paternidad Prenatal - Pruebas de paternidad prenatal no invasivas internacionales"
+                width={150}
+                height={50}
+                className="h-10 w-auto object-contain"
+              />
+              <h3 className="text-2xl font-bold gradient-text">
+                Test Paternidad Prenatal
+              </h3>
+            </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Pruebas de paternidad prenatal precisas y seguras para familias en todo el mundo.
               Utilizamos tecnología de vanguardia para brindarte resultados confiables y confidenciales sin importar el país donde te encuentres.
@@ -72,11 +82,6 @@ export default function Footer() {
               <li>
                 <a href="#cookies" className="text-gray-300 hover:text-white transition-colors duration-200">
                   Política de cookies
-                </a>
-              </li>
-              <li>
-                <a href="#garantias" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Garantías
                 </a>
               </li>
             </ul>

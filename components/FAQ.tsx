@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, HelpCircle } from 'lucide-react'
+import Script from 'next/script'
 import { smoothScrollTo } from '@/utils/smoothScroll'
+import { faqSchema } from '@/utils/schema'
 
 const faqs = [
   {
@@ -49,6 +51,13 @@ export default function FAQ() {
 
   return (
     <section id="faqs" className="section-padding bg-gradient-to-br from-ocean-800 via-ocean-900 to-navy-900">
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema(faqs))
+        }}
+      />
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

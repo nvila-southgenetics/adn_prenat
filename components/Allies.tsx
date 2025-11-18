@@ -19,19 +19,32 @@ export default function Allies() {
             <span className="inline-flex items-center justify-center rounded-full bg-white/10 p-2.5">
               <ShieldCheck className="w-8 h-8 text-red-500" />
             </span>
-            <div className="flex flex-col leading-tight">
-              <span className="text-xs md:text-sm uppercase tracking-[0.35em] text-white/50 font-semibold">Respaldado internacional</span>
-              <Image
-                src="/imgs/logoDDC.png"
-                alt="DDC - DNA Diagnostic Center"
-                width={220}
-                height={80}
-                className="w-52 h-auto object-contain"
-                priority
-              />
-              <span className="text-[0.6rem] md:text-xs uppercase tracking-[0.2em] text-gray-300 font-semibold">
-                DNA Diagnostic Center
-              </span>
+            <div className="flex items-center gap-6">
+              <div className="flex flex-col leading-tight">
+                <span className="text-xs md:text-sm uppercase tracking-[0.35em] text-white/50 font-semibold">SouthGenetics</span>
+                <Image
+                  src="/imgs/logo.png"
+                  alt="SouthGenetics - Test Paternidad Prenatal - Servicios de prueba de paternidad prenatal no invasiva"
+                  width={200}
+                  height={70}
+                  className="w-48 h-auto object-contain"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col leading-tight">
+                <span className="text-xs md:text-sm uppercase tracking-[0.35em] text-white/50 font-semibold">Respaldado internacional</span>
+                <Image
+                  src="/imgs/logoDDC.png"
+                  alt="DDC DNA Diagnostic Center - Laboratorio certificado para análisis de ADN prenatal y paternidad"
+                  width={220}
+                  height={80}
+                  className="w-52 h-auto object-contain"
+                  priority
+                />
+                <span className="text-[0.6rem] md:text-xs uppercase tracking-[0.2em] text-gray-300 font-semibold">
+                  DNA Diagnostic Center
+                </span>
+              </div>
             </div>
           </div>
 

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Phone, Mail } from 'lucide-react'
+import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
 
 export default function Header() {
@@ -38,14 +39,26 @@ export default function Header() {
       <div className="bg-ocean-700 text-white py-2">
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 305 555 0198</span>
+            <div className="flex items-center gap-4">
+              <div className="bg-sky-100 px-2 py-1 rounded">
+                <Image
+                  src="/imgs/logo.png"
+                  alt="SouthGenetics - Test Paternidad Prenatal - Pruebas de paternidad prenatal certificadas"
+                  width={100}
+                  height={30}
+                  className="h-6 w-auto object-contain"
+                  priority
+                />
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>contact@testadnprenatal.com</span>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+1 305 555 0198</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4" />
+                  <span>contact@testadnprenatal.com</span>
+                </div>
               </div>
             </div>
             <div className="hidden md:block">
@@ -61,9 +74,11 @@ export default function Header() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold gradient-text">
-                Test ADN Prenatal
-              </h1>
+              <a href="/">
+                <h1 className="text-2xl font-bold gradient-text">
+                  Test Paternidad Prenatal
+                </h1>
+              </a>
             </div>
 
             {/* Menú desktop */}

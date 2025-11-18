@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://southgenetics.com/sitemap.xml',
+    sitemap: 'https://paternidadprenatal.com/sitemap.xml',
   }
 }
 

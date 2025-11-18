@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { MessageCircle, Shield, Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
+import Image from 'next/image'
 
 export default function FooterCo() {
   const scrollToTop = () => {
@@ -19,9 +20,18 @@ export default function FooterCo() {
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <h3 className="text-2xl font-bold mb-4 gradient-text">
-              Test ADN Prenatal Colombia
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/imgs/logo.png"
+                alt="SouthGenetics - Paternidad Prenatal Colombia - Pruebas de paternidad prenatal en Cali"
+                width={150}
+                height={50}
+                className="h-10 w-auto object-contain"
+              />
+              <h3 className="text-2xl font-bold gradient-text">
+                Paternidad Prenatal Colombia
+              </h3>
+            </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Acompañamos a familias colombianas con pruebas de paternidad prenatal seguras, confidenciales y certificadas por laboratorios internacionales.
             </p>
@@ -67,11 +77,6 @@ export default function FooterCo() {
               <li>
                 <a href="#cookies" className="text-gray-300 hover:text-white transition-colors duration-200">
                   Política de cookies
-                </a>
-              </li>
-              <li>
-                <a href="#garantias" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Garantías
                 </a>
               </li>
             </ul>

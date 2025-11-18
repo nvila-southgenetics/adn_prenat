@@ -22,7 +22,7 @@ export default function EmpathyCo() {
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/imgs/mujer-embarazada.png"
-                  alt="Mujer embarazada tranquila y acompañada"
+                  alt="Mujer embarazada prueba paternidad prenatal Colombia - Test seguro no invasivo desde semana 7 en Cali"
                   width={600}
                   height={600}
                   className="w-full h-auto object-cover"

@@ -7,13 +7,13 @@ import { smoothScrollTo } from '@/utils/smoothScroll'
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-to-r from-white via-gray-50 to-gray-100 overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-to-r from-white via-gray-50 to-gray-100 overflow-hidden pt-20">
       {/* Imagen de fondo a la derecha */}
       <div className="absolute inset-0 z-0">
         <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
           <Image
             src="/imgs/nano-banana-2025-10-07T14-51-23.png"
-            alt="ADN Prenatal - Fondo"
+            alt="Prueba de paternidad prenatal no invasiva - Test de paternidad desde semana 7 de embarazo con resultados certificados"
             fill
             className="object-contain object-right"
             priority
@@ -39,7 +39,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Test de Paternidad{' '}
+                Prueba de Paternidad{' '}
                 <span className="text-blue-600">Prenatal</span>{' '}
                 con alcance global
               </motion.h1>
