@@ -41,7 +41,7 @@ export default function Hero() {
               >
                 Prueba de Paternidad{' '}
                 <span className="text-blue-600">Prenatal</span>{' '}
-                con alcance LatAm
+                en Colombia
               </motion.h1>
               
               <motion.p 

@@ -99,18 +99,6 @@ module.exports = nextConfig
 
 ---
 
-### 4. **Alt Text Optimizado en Imágenes**
-**Archivos:** Todos los componentes con imágenes
-
-**Problema actual:**
-- `alt="ADN Prenatal - Fondo"` ❌ (muy genérico)
-- `alt="Test ADN Prenatal Colombia - Fondo"` ❌ (muy genérico)
-
-**Debe ser:**
-- `alt="Prueba de paternidad prenatal no invasiva - Mujer embarazada desde semana 7 de embarazo"` ✅
-- `alt="Test Paternidad Prenatal Colombia - Laboratorio certificado en Cali"` ✅
-
-**Acción:** Revisar y optimizar todos los alt text con keywords
 
 ---
 

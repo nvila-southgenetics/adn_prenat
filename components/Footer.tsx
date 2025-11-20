@@ -94,7 +94,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-4">Contacto LatAm</h4>
+            <h4 className="text-lg font-semibold mb-4">Contacto</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent-400" />
@@ -106,7 +106,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent-400" />
-                <span className="text-gray-300">Montevideo, Uruguay</span>
+                <span className="text-gray-300">Bogotá, Colombia</span>
               </div>
             </div>
 

@@ -3,18 +3,15 @@ import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
-import { organizationSchema, serviceSchema } from '@/utils/schema'
+import { organizationSchemaColombia, serviceSchemaColombia, localBusinessSchemaColombia } from '@/utils/schema'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://paternidadprenatal.com'),
-  title: 'Test de Paternidad Prenatal - SouthGenetics',
-  description: 'Prueba sin riesgo para el bebé desde la semana 7. Resultados rápidos y precisos.',
-  keywords: 'prueba paternidad prenatal, test paternidad prenatal, prueba adn prenatal, paternidad prenatal no invasiva, test paternidad embarazo, prueba paternidad prenatal precio',
-  authors: [{ name: 'Test Paternidad Prenatal' }],
-  viewport: 'width=device-width, initial-scale=1',
-  robots: 'index, follow',
+  title: 'Prueba de Paternidad Prenatal en Colombia - Test Paternidad Prenatal Colombia',
+  description: 'Test Paternidad Prenatal Colombia: pruebas de paternidad prenatal seguras, confidenciales y certificadas. Resultados en 10 días hábiles. Laboratorio en Cali. Precio $1,490 USD.',
+  keywords: 'prueba paternidad prenatal colombia, test paternidad prenatal cali, prueba adn prenatal colombia, prueba paternidad embarazo colombia, test paternidad bogota, prueba adn prenatal medellin, prueba paternidad prenatal precio colombia',
   alternates: {
     canonical: 'https://paternidadprenatal.com/',
     languages: {
@@ -23,32 +20,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Test de Paternidad Prenatal - SouthGenetics',
-    description: 'Prueba sin riesgo para el bebé desde la semana 7. Resultados rápidos y precisos.',
+    title: 'Prueba de Paternidad Prenatal en Colombia - Test Paternidad Prenatal Colombia',
+    description: 'Test Paternidad Prenatal Colombia: resultados con precisión del 99.9% y acompañamiento cercano. Laboratorio certificado en Cali.',
     type: 'website',
-    locale: 'es',
+    locale: 'es_CO',
     url: 'https://paternidadprenatal.com/',
-    siteName: 'Test Paternidad Prenatal',
+    siteName: 'Test Paternidad Prenatal Colombia',
     images: [
       {
-        url: '/imgs/logo.png',
-        width: 512,
-        height: 512,
-        alt: 'SouthGenetics - Test Paternidad Prenatal Logo',
-      },
-      {
-        url: '/imgs/og-image.jpg',
+        url: '/imgs/og-image-colombia.jpg',
         width: 1200,
         height: 630,
-        alt: 'Test Paternidad Prenatal - Pruebas certificadas de paternidad prenatal',
+        alt: 'Test Paternidad Prenatal Colombia - Laboratorio certificado en Cali',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Test de Paternidad Prenatal - SouthGenetics',
-    description: 'Prueba sin riesgo para el bebé desde la semana 7. Resultados rápidos y precisos.',
-    images: ['/imgs/twitter-card.jpg'],
+    title: 'Test Paternidad Prenatal Colombia - Laboratorio Cali',
+    description: 'Pruebas de paternidad prenatal en Colombia con resultados certificados en 10 días.',
+    images: ['/imgs/twitter-card-colombia.jpg'],
   },
 }
 
@@ -107,14 +98,21 @@ export default function RootLayout({
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema)
+            __html: JSON.stringify(organizationSchemaColombia)
           }}
         />
         <Script
           id="service-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(serviceSchema)
+            __html: JSON.stringify(serviceSchemaColombia)
+          }}
+        />
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchemaColombia)
           }}
         />
       </head>
