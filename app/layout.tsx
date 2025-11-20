@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { organizationSchema, serviceSchema } from '@/utils/schema'
 
@@ -70,6 +71,29 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Event snippet for Envío de formulario para clientes potenciales conversion */}
+        <Script
+          id="google-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17741877011/ymHnCNGIysIbEJOe_otC',
+                    'value': 1.0,
+                    'currency': 'USD',
+                    'event_callback': callback
+                });
+                return false;
+              }
+            `,
+          }}
+        />
         <Script
           id="organization-schema"
           type="application/ld+json"
@@ -87,6 +111,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
+        <Analytics />
         <elevenlabs-convai agent-id="agent_5401k8y01665evjb09r95z6scpsv"></elevenlabs-convai>
         <Script src="https://unpkg.com/@elevenlabs/convai-widget-embed" strategy="afterInteractive" />
       </body>

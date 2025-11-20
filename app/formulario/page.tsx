@@ -68,6 +68,11 @@ export default function FormularioPage() {
         throw new Error('Error al enviar el formulario')
       }
 
+      // Reportar conversión a Google Ads
+      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+        (window as any).gtag_report_conversion()
+      }
+
       setShowThankYou(true)
     } catch (error) {
       console.error('Error al enviar el formulario:', error)
