@@ -7,7 +7,7 @@ import { smoothScrollTo } from '@/utils/smoothScroll'
 
 export default function HeroCo() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-to-r from-white via-gray-50 to-gray-100 overflow-hidden pt-[10px]">
+    <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-to-r from-white via-gray-50 to-gray-100 overflow-hidden pt-[10px] pb-16">
       <div className="absolute inset-0 z-0">
         <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
           <Image
