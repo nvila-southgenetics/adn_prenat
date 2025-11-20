@@ -148,6 +148,11 @@ export default function FAQ() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center justify-center"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    (window as any).gtag_report_conversion()
+                  }
+                }}
               >
                 <HelpCircle className="w-5 h-5 mr-2" />
                 Consultar por WhatsApp

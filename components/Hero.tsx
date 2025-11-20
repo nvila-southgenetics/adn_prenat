@@ -92,6 +92,11 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-center group"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    (window as any).gtag_report_conversion()
+                  }
+                }}
               >
                 <MessageCircle className="w-5 h-5 group-hover:animate-pulse" />
                 Hablar por WhatsApp

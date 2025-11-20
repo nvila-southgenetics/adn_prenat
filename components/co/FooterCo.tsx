@@ -110,6 +110,11 @@ export default function FooterCo() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    (window as any).gtag_report_conversion()
+                  }
+                }}
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp</span>

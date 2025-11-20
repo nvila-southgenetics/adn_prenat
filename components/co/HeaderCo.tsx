@@ -120,6 +120,11 @@ export default function HeaderCo() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    (window as any).gtag_report_conversion()
+                  }
+                }}
               >
                 WhatsApp
               </a>

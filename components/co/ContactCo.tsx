@@ -40,6 +40,11 @@ export default function ContactCo() {
 - Teléfono: ${formData.telefono}
 - Semana de gestación: ${formData.semana}`
 
+      // Reportar conversión a Google Ads
+      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+        (window as any).gtag_report_conversion()
+      }
+
       const whatsappUrl = `https://wa.me/573173644276?text=${encodeURIComponent(mensaje)}`
       window.open(whatsappUrl, '_blank')
 
@@ -241,6 +246,11 @@ export default function ContactCo() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary bg-white text-accent-600 hover:bg-gray-100 inline-flex items-center"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    (window as any).gtag_report_conversion()
+                  }
+                }}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contactar por WhatsApp

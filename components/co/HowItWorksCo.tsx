@@ -237,6 +237,11 @@ export default function HowItWorksCo() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors inline-flex items-center justify-center shadow-lg text-lg"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    (window as any).gtag_report_conversion()
+                  }
+                }}
               >
                 <MessageCircle className="w-6 h-6 mr-2" />
                 Contactar por WhatsApp
