@@ -1,9 +1,11 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle, Droplets, FileCheck } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
+import WhatsAppModal from '../WhatsAppModal'
 
 const steps = [
   {
@@ -39,6 +41,8 @@ const steps = [
 ]
 
 export default function HowItWorksCo() {
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
+
   return (
     <section id="como-funciona" className="relative py-24 bg-gradient-to-b from-ocean-900 via-ocean-800 to-ocean-700 overflow-hidden text-white">
       <div className="container-custom">
@@ -232,20 +236,14 @@ export default function HowItWorksCo() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://wa.me/573173644276"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setShowWhatsAppModal(true)}
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors inline-flex items-center justify-center shadow-lg text-lg"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion()
-                  }
-                }}
               >
                 <MessageCircle className="w-6 h-6 mr-2" />
                 Contactar por WhatsApp
-              </a>
+              </button>
               <a
                 href="/co/formulario"
                 className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center shadow-lg text-lg"
@@ -259,6 +257,8 @@ export default function HowItWorksCo() {
           </div>
         </motion.div>
       </div>
+
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
     </section>
   )
 }

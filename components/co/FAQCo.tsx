@@ -6,6 +6,7 @@ import { ChevronDown, HelpCircle } from 'lucide-react'
 import Script from 'next/script'
 import { smoothScrollTo } from '@/utils/smoothScroll'
 import { faqSchema } from '@/utils/schema'
+import WhatsAppModal from '../WhatsAppModal'
 
 const faqs = [
   {
@@ -32,6 +33,7 @@ const faqs = [
 
 export default function FAQCo() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -130,20 +132,14 @@ export default function FAQCo() {
               Escríbenos por WhatsApp y con gusto te acompañamos en lo que sigue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://wa.me/573173644276"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setShowWhatsAppModal(true)}
                 className="btn-primary inline-flex items-center justify-center"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion()
-                  }
-                }}
               >
                 <HelpCircle className="w-5 h-5 mr-2" />
                 Consultar por WhatsApp
-              </a>
+              </button>
               <a
                 href="/co/formulario"
                 className="btn-outline inline-flex items-center justify-center"
@@ -157,6 +153,8 @@ export default function FAQCo() {
           </div>
         </motion.div>
       </div>
+
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
     </section>
   )
 }

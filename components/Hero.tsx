@@ -1,11 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle, Baby, Users, Shield, Clock, CheckCircle } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
+import WhatsAppModal from './WhatsAppModal'
 
 export default function Hero() {
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
+
   return (
     <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-to-r from-white via-gray-50 to-gray-100 overflow-hidden pt-20 pb-16">
       {/* Imagen de fondo a la derecha */}
@@ -87,20 +91,16 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <a
-                href="https://wa.me/573173644276"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setShowWhatsAppModal(true)}
                 className="btn-secondary text-center group"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion()
-                  }
-                }}
               >
                 <MessageCircle className="w-5 h-5 group-hover:animate-pulse" />
                 Hablar por WhatsApp
-              </a>
+              </button>
+
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
               <a
                 href="/formulario"
                 className="btn-outline border-ocean-600 text-ocean-600 hover:bg-ocean-600 hover:text-white text-center"
@@ -114,6 +114,8 @@ export default function Hero() {
           <div className="hidden lg:block"></div>
         </div>
       </div>
+
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
     </section>
   )
 }

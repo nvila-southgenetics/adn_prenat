@@ -5,9 +5,11 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Phone, Mail } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
+import WhatsAppModal from './WhatsAppModal'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === '/'
@@ -119,19 +121,13 @@ export default function Header() {
               >
                 Contacto
               </button>
-              <a
-                href="https://wa.me/573173644276"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setShowWhatsAppModal(true)}
                 className="btn-secondary"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion()
-                  }
-                }}
               >
                 WhatsApp
-              </a>
+              </button>
             </div>
 
             {/* Botón menú móvil */}
@@ -187,19 +183,20 @@ export default function Header() {
                 >
                   Contacto
                 </button>
-                <a
-                  href="https://wa.me/573173644276"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => setShowWhatsAppModal(true)}
                   className="btn-secondary text-center"
                 >
                   WhatsApp
-                </a>
+                </button>
               </div>
             </div>
           )}
         </div>
       </nav>
+
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
     </header>
   )
 }

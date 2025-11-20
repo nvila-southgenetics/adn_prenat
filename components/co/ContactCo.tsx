@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, Send, CheckCircle, AlertCircle, MessageCircle } from 'lucide-react'
+import WhatsAppModal from '../WhatsAppModal'
 
 export default function ContactCo() {
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -241,24 +243,20 @@ export default function ContactCo() {
               <p className="text-accent-100 mb-6">
                 Escríbenos y coordinamos la toma de muestra en la ciudad que necesites. Respondemos rapidísimo.
               </p>
-              <a
-                href="https://wa.me/573173644276"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setShowWhatsAppModal(true)}
                 className="btn-secondary bg-white text-accent-600 hover:bg-gray-100 inline-flex items-center"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion()
-                  }
-                }}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contactar por WhatsApp
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>
       </div>
+
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
     </section>
   )
 }

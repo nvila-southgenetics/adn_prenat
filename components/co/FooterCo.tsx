@@ -1,15 +1,20 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle, Shield, Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
 import Image from 'next/image'
+import WhatsAppModal from '../WhatsAppModal'
 
 export default function FooterCo() {
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
+    <div>
     <footer className="bg-navy-900 text-white">
       <div className="container-custom py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -100,25 +105,19 @@ export default function FooterCo() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent-400" />
-                <span className="text-gray-300">Bogotá, Colombia</span>
+                <span className="text-gray-300">Cali, Colombia</span>
               </div>
             </div>
 
             <div className="mt-6">
-              <a
-                href="https://wa.me/573173644276"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setShowWhatsAppModal(true)}
                 className="inline-flex items-center space-x-2 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion()
-                  }
-                }}
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp</span>
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>
@@ -167,6 +166,9 @@ export default function FooterCo() {
         </div>
       </div>
     </footer>
+
+    <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+  </div>
   )
 }
 
