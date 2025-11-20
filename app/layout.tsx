@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://paternidadprenatal.com'),
-  title: 'Prueba de Paternidad Prenatal Internacional - Test Paternidad Prenatal',
-  description: 'Test Paternidad Prenatal ofrece pruebas de paternidad prenatal seguras, confidenciales y con cobertura global. Resultados certificados en pocos días. Prueba no invasiva desde la semana 7.',
+  title: 'Test de Paternidad Prenatal - SouthGenetics',
+  description: 'Prueba sin riesgo para el bebé desde la semana 7. Resultados rápidos y precisos.',
   keywords: 'prueba paternidad prenatal, test paternidad prenatal, prueba adn prenatal, paternidad prenatal no invasiva, test paternidad embarazo, prueba paternidad prenatal precio',
   authors: [{ name: 'Test Paternidad Prenatal' }],
   viewport: 'width=device-width, initial-scale=1',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Prueba de Paternidad Prenatal Internacional - Test Paternidad Prenatal',
-    description: 'Test Paternidad Prenatal: pruebas seguras, no invasivas y con resultados certificados en todo el mundo. Desde la semana 7 de embarazo.',
+    title: 'Test de Paternidad Prenatal - SouthGenetics',
+    description: 'Prueba sin riesgo para el bebé desde la semana 7. Resultados rápidos y precisos.',
     type: 'website',
     locale: 'es',
     url: 'https://paternidadprenatal.com/',
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Test Paternidad Prenatal - Pruebas Certificadas',
-    description: 'Pruebas de paternidad prenatal seguras y confidenciales con resultados en 10 días.',
+    title: 'Test de Paternidad Prenatal - SouthGenetics',
+    description: 'Prueba sin riesgo para el bebé desde la semana 7. Resultados rápidos y precisos.',
     images: ['/imgs/twitter-card.jpg'],
   },
 }

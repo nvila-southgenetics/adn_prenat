@@ -212,7 +212,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Ubicación</h4>
-                    <p className="text-gray-600">Miami, Estados Unidos</p>
+                    <p className="text-gray-600">Montevideo, Uruguay</p>
                   </div>
                 </div>
 

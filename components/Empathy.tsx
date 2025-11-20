@@ -46,7 +46,7 @@ export default function Empathy() {
               <p className="text-gray-700 italic leading-relaxed">
                 "El equipo fue muy comprensivo y me explicó cada paso. Sentí respaldo profesional y humano desde la primera llamada."
               </p>
-              <p className="text-gray-600 text-sm mt-3">— Laura, Miami, Estados Unidos</p>
+              <p className="text-gray-600 text-sm mt-3">— Montevideo, Uruguay</p>
             </motion.div>
           </motion.div>
 
