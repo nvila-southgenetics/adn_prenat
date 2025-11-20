@@ -31,6 +31,12 @@ export const metadata: Metadata = {
     siteName: 'Test Paternidad Prenatal',
     images: [
       {
+        url: '/imgs/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'SouthGenetics - Test Paternidad Prenatal Logo',
+      },
+      {
         url: '/imgs/og-image.jpg',
         width: 1200,
         height: 630,
@@ -54,6 +60,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        {/* Logo para Google Search Results */}
+        <link rel="icon" href="/imgs/logo.png" />
+        <link rel="apple-touch-icon" href="/imgs/logo.png" />
         {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17741877011"
