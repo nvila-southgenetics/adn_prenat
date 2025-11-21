@@ -14,7 +14,7 @@ const steps = [
     title: 'Contacto inicial',
     description: 'Escríbenos por WhatsApp o completa el formulario. Nuestro equipo en Cali te responde rapidísimo, resuelve tus dudas y coordina el siguiente paso desde nuestro laboratorio.',
     image: '/imgs/contacto-inicialardo.png',
-    imageAlt: 'Contacto inicial prueba paternidad prenatal Colombia - Formulario y WhatsApp desde Cali',
+    imageAlt: 'Contacto inicial prueba paternidad prenatal Cali - Formulario y WhatsApp desde Cali',
     color: 'from-blue-500 to-cyan-500',
     position: 'left'
   },
@@ -34,7 +34,7 @@ const steps = [
     title: 'Resultados Claros',
     description: 'En 10 días hábiles te compartimos los resultados con 99.9% de precisión. Los entregamos de forma confidencial y te acompañamos para interpretarlos.',
     image: '/imgs/resultados.png',
-    imageAlt: 'Resultados prueba paternidad prenatal Colombia - Certificado 99.9% precisión en 10 días hábiles',
+    imageAlt: 'Resultados prueba paternidad prenatal Cali - Certificado 99.9% precisión en 10 días hábiles',
     color: 'from-emerald-500 to-teal-500',
     position: 'left'
   }

@@ -44,7 +44,7 @@ export default function HeaderCo() {
               <div className="bg-sky-100 px-2 py-1 rounded">
                 <Image
                   src="/imgs/logo.png"
-                  alt="SouthGenetics - Paternidad Prenatal Colombia - Laboratorio certificado en Cali"
+                  alt="SouthGenetics - Paternidad Prenatal Cali - Laboratorio certificado en Cali"
                   width={100}
                   height={30}
                   className="h-6 w-auto object-contain"
@@ -75,7 +75,7 @@ export default function HeaderCo() {
             <div className="flex items-center">
               <a href="/co">
                 <h1 className="text-2xl font-bold gradient-text">
-                  Paternidad Prenatal Colombia
+                  Paternidad Prenatal Cali
                 </h1>
               </a>
             </div>

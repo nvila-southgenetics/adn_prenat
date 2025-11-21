@@ -4,8 +4,8 @@ import FooterCo from '@/components/co/FooterCo'
 import { Shield, Users, Award, Heart, Target, Microscope } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Sobre Nosotros | Test ADN Prenatal Colombia',
-  description: 'Conoce más sobre Test ADN Prenatal en Colombia, nuestra misión y el equipo de profesionales comprometidos con brindarte resultados precisos y confidenciales.',
+  title: 'Sobre Nosotros | Test ADN Prenatal Cali',
+  description: 'Conoce más sobre Test ADN Prenatal en Cali, nuestra misión y el equipo de profesionales comprometidos con brindarte resultados precisos y confidenciales.',
 }
 
 export default function SobreNosotrosCo() {
@@ -71,11 +71,11 @@ export default function SobreNosotrosCo() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Nuestra Historia en Colombia
+                  Nuestra Historia en Cali
                 </h2>
                 <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
                   <p>
-                    Test ADN Prenatal llegó a Colombia con una misión clara: hacer accesibles las pruebas de paternidad prenatal no invasivas de la más alta calidad, con resultados confiables y un servicio completamente confidencial.
+                    Test ADN Prenatal llegó a Cali con una misión clara: hacer accesibles las pruebas de paternidad prenatal no invasivas de la más alta calidad, con resultados confiables y un servicio completamente confidencial.
                   </p>
                   <p>
                     Desde nuestra sede en Cali, coordinamos todo el proceso en alianza con laboratorios certificados internacionalmente. Entendemos que este momento puede estar lleno de emociones y preguntas, por eso te acompañamos en cada paso con empatía, profesionalismo y discreción absoluta.
@@ -177,7 +177,7 @@ export default function SobreNosotrosCo() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Profesionalismo</h3>
                 <p className="text-gray-600">
-                  Nuestro equipo en Colombia está capacitado para brindarte el mejor servicio
+                  Nuestro equipo en Cali está capacitado para brindarte el mejor servicio
                 </p>
               </div>
               <div className="text-center">
@@ -208,7 +208,7 @@ export default function SobreNosotrosCo() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              ¿Por Qué Elegirnos en Colombia?
+              ¿Por Qué Elegirnos en Cali?
             </h2>
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
@@ -232,7 +232,7 @@ export default function SobreNosotrosCo() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-xl font-bold mb-3">✓ Atención Local</h3>
                 <p className="text-ocean-100">
-                  Coordinamos todo desde Cali y atendemos en toda Colombia
+                  Coordinamos todo desde Cali con atención cercana y personalizada
                 </p>
               </div>
             </div>

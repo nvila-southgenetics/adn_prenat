@@ -212,7 +212,7 @@ export default function ContactCo() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Ubicación</h4>
-                    <p className="text-gray-600">Cali, Colombia</p>
+                    <p className="text-gray-600">Cali</p>
                   </div>
                 </div>
 

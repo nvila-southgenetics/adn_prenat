@@ -59,7 +59,7 @@ export default function FormularioCoPage() {
           semana: formData.semana,
           acceptSMS: formData.acceptSMS,
           acceptInfo: formData.acceptInfo,
-          pais: 'Colombia'
+          pais: 'Cali'
         })
       })
 
@@ -385,7 +385,7 @@ export default function FormularioCoPage() {
             >
               <Image
                 src="/imgs/embarazo.png"
-                alt="Mujer embarazada Colombia - Prueba paternidad prenatal no invasiva desde semana 7 en Cali"
+                alt="Mujer embarazada Cali - Prueba paternidad prenatal no invasiva desde semana 7 en Cali"
                 fill
                 className="object-cover"
                 priority
@@ -403,7 +403,7 @@ export default function FormularioCoPage() {
             >
               <Image
                 src="/imgs/bebe-en-hombros.png"
-                alt="Formulario prueba paternidad prenatal Colombia - Solicita tu test en Cali desde semana 7 de embarazo"
+                alt="Formulario prueba paternidad prenatal Cali - Solicita tu test en Cali desde semana 7 de embarazo"
                 fill
                 className="object-cover"
                 priority
@@ -446,10 +446,16 @@ export default function FormularioCoPage() {
                   </div>
 
                   <div className="space-y-6 text-gray-700">
+                    {/* Precio arriba */}
+                    <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
+                      <p className="font-semibold text-lg text-gray-900 mb-1">Inversión</p>
+                      <p className="text-ocean-700 font-bold text-xl">$1,199 USD</p>
+                    </div>
+
                     <div>
                       <h3 className="font-semibold text-lg mb-2 text-gray-900">¿Cómo funciona la prueba?</h3>
                       <p className="leading-relaxed">
-                        La prueba es muy sencilla: solo necesitamos una muestra de sangre de la mamá (no requiere ayuno ni preparación previa) y un hisopado del presunto padre. Lo mejor es que puedes realizarla desde la <span className="underline">semana 7 de embarazo</span>.
+                        La prueba es muy sencilla: solo necesitamos una muestra de sangre de la mamá (no requiere ayuno ni preparación previa) y un hisopado del presunto padre. Lo mejor es que puedes realizarla desde las <span className="underline font-bold">7 semanas de embarazo</span>.
                       </p>
                     </div>
 
@@ -470,11 +476,6 @@ export default function FormularioCoPage() {
                         <li>Si la gestante ha tenido una transfusión de sangre hace menos de dos años</li>
                         <li>Si la gestante se encuentra con toxemia gestacional o tumor</li>
                       </ul>
-                    </div>
-
-                    <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
-                      <p className="font-semibold text-lg text-gray-900 mb-1">Inversión</p>
-                      <p className="text-ocean-700 font-bold text-xl">$1,199 USD</p>
                     </div>
                   </div>
 

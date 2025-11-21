@@ -16,7 +16,7 @@ export default function HeroCo() {
         <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
           <Image
             src="/imgs/nano-banana-2025-10-07T14-51-23.png"
-            alt="Prueba de paternidad prenatal en Colombia - Test paternidad prenatal Cali con laboratorio certificado"
+            alt="Prueba de paternidad prenatal en Cali - Test paternidad prenatal Cali con laboratorio certificado"
             fill
             className="object-contain object-right"
             priority
@@ -42,7 +42,7 @@ export default function HeroCo() {
               >
                 Prueba de Paternidad{' '}
                 <span className="text-blue-600">Prenatal</span>{' '}
-                en Colombia
+                en Cali
               </motion.h1>
 
               <motion.p

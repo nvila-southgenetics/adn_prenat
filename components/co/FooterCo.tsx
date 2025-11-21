@@ -28,17 +28,17 @@ export default function FooterCo() {
             <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/imgs/logo.png"
-                alt="SouthGenetics - Paternidad Prenatal Colombia - Pruebas de paternidad prenatal en Cali"
+                alt="SouthGenetics - Paternidad Prenatal Cali - Pruebas de paternidad prenatal en Cali"
                 width={150}
                 height={50}
                 className="h-10 w-auto object-contain"
               />
               <h3 className="text-2xl font-bold gradient-text">
-                Paternidad Prenatal Colombia
+                Paternidad Prenatal Cali
               </h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Acompañamos a familias colombianas con pruebas de paternidad prenatal seguras, confidenciales y certificadas por laboratorios internacionales.
+              Acompañamos a familias en Cali con pruebas de paternidad prenatal seguras, confidenciales y certificadas por laboratorios internacionales.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
@@ -105,7 +105,7 @@ export default function FooterCo() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent-400" />
-                <span className="text-gray-300">Cali, Colombia</span>
+                <span className="text-gray-300">Cali</span>
               </div>
             </div>
 
@@ -133,7 +133,7 @@ export default function FooterCo() {
               viewport={{ once: true }}
               className="text-gray-400 text-sm"
             >
-              <p>&copy; 2024 Test ADN Prenatal Colombia. Todos los derechos reservados.</p>
+              <p>&copy; 2024 Test ADN Prenatal Cali. Todos los derechos reservados.</p>
             </motion.div>
 
             <motion.div

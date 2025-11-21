@@ -30,9 +30,9 @@ export const organizationSchema = {
 export const organizationSchemaColombia = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "Paternidad Prenatal Colombia",
-  "alternateName": "SouthGenetics Colombia",
-  "description": "Pruebas de paternidad prenatal no invasivas en Colombia. Laboratorio certificado en Cali. Resultados en 10 días hábiles.",
+  "name": "Paternidad Prenatal Cali",
+  "alternateName": "SouthGenetics Cali",
+  "description": "Pruebas de paternidad prenatal no invasivas en Cali. Laboratorio certificado en Cali. Resultados en 10 días hábiles.",
   "url": "https://paternidadprenatal.com/co",
   "logo": "https://paternidadprenatal.com/imgs/logo.png",
   "telephone": "+57-317-364-4276",
@@ -50,7 +50,7 @@ export const organizationSchemaColombia = {
   "medicalSpecialty": "Genetic Testing",
   "areaServed": {
     "@type": "Country",
-    "name": "Colombia"
+    "name": "Cali"
   }
 }
 
@@ -82,15 +82,15 @@ export const serviceSchemaColombia = {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Prenatal Paternity Test",
-  "name": "Prueba de Paternidad Prenatal en Colombia",
-  "description": "Prueba de paternidad prenatal no invasiva en Colombia. Laboratorio certificado en Cali. Resultados en 10 días hábiles. Precisión del 99.9%.",
+  "name": "Prueba de Paternidad Prenatal en Cali",
+  "description": "Prueba de paternidad prenatal no invasiva en Cali. Laboratorio certificado en Cali. Resultados en 10 días hábiles. Precisión del 99.9%.",
   "provider": {
     "@type": "MedicalBusiness",
-    "name": "Paternidad Prenatal Colombia"
+    "name": "Paternidad Prenatal Cali"
   },
   "areaServed": {
     "@type": "Country",
-    "name": "Colombia"
+    "name": "Cali"
   },
   "offers": {
     "@type": "Offer",
@@ -118,7 +118,7 @@ export const faqSchema = (faqs: Array<{question: string, answer: string}>) => ({
 export const localBusinessSchemaColombia = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Paternidad Prenatal Colombia",
+  "name": "Paternidad Prenatal Cali",
   "image": "https://southgenetics.com/imgs/logo.png",
   "telephone": "+57-317-364-4276",
   "email": "cjflorez@southgenetics.com",

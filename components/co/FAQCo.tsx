@@ -11,7 +11,7 @@ import WhatsAppModal from '../WhatsAppModal'
 const faqs = [
   {
     question: '¿Qué tan precisa es la prueba?',
-    answer: 'La prueba de paternidad prenatal que realizamos en Colombia tiene una precisión del 99.9%. Utilizamos la misma tecnología de laboratorio certificada que se emplea en clínicas de referencia mundial.'
+    answer: 'La prueba de paternidad prenatal que realizamos en Cali tiene una precisión del 99.9%. Utilizamos la misma tecnología de laboratorio certificada que se emplea en clínicas de referencia mundial.'
   },
   {
     question: '¿Cuánto tardan los resultados?',
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: '¿Qué incluye el precio?',
-    answer: 'Incluye la toma de muestras, el análisis de laboratorio, el informe con validez legal, la entrega segura de resultados y el acompañamiento de nuestros especialistas en Colombia.'
+    answer: 'Incluye la toma de muestras, el análisis de laboratorio, el informe con validez legal, la entrega segura de resultados y el acompañamiento de nuestros especialistas en Cali.'
   }
 ]
 
@@ -60,7 +60,7 @@ export default function FAQCo() {
             Preguntas frecuentes
           </h2>
           <p className="text-xl text-ocean-100 max-w-3xl mx-auto">
-            Lo esencial sobre nuestra prueba de paternidad prenatal en Colombia
+            Lo esencial sobre nuestra prueba de paternidad prenatal en Cali
           </p>
         </motion.div>
 

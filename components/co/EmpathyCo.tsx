@@ -22,7 +22,7 @@ export default function EmpathyCo() {
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/imgs/mujer-embarazada.png"
-                  alt="Mujer embarazada prueba paternidad prenatal Colombia - Test seguro no invasivo desde semana 7 en Cali"
+                  alt="Mujer embarazada prueba paternidad prenatal Cali - Test seguro no invasivo desde semana 7 en Cali"
                   width={600}
                   height={600}
                   className="w-full h-auto object-cover"
@@ -39,7 +39,7 @@ export default function EmpathyCo() {
                 className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl shadow-lg p-6"
               >
                 <p className="text-gray-700 italic leading-relaxed">
-                  "Me atendieron con una paciencia increíble. Siempre estuvieron pendientes, explicando cada paso con ese tono cercano que tanto agradecemos en Colombia."
+                  "Me atendieron con una paciencia increíble. Siempre estuvieron pendientes, explicando cada paso con ese tono cercano que tanto agradecemos en Cali."
                 </p>
                 <p className="text-gray-600 text-sm mt-3">— Daniela, Bogotá</p>
               </motion.div>
@@ -71,7 +71,7 @@ export default function EmpathyCo() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  Las dudas y la ansiedad son normales cuando todavía no tienes claridad. En Test ADN Prenatal Colombia te brindamos <span className="font-bold text-orange-600">acompañamiento cercano, confidencial y respetuoso</span>, tal como lo merece tu familia.
+                  Las dudas y la ansiedad son normales cuando todavía no tienes claridad. En Test ADN Prenatal Cali te brindamos <span className="font-bold text-orange-600">acompañamiento cercano, confidencial y respetuoso</span>, tal como lo merece tu familia.
                 </motion.p>
               </div>
 
@@ -100,7 +100,7 @@ export default function EmpathyCo() {
               >
                 <div className="flex flex-col items-center text-center p-5 bg-white/60 backdrop-blur-sm rounded-lg">
                   <Heart className="w-10 h-10 text-orange-500 mb-3" />
-                  <span className="font-semibold text-gray-800">Calidez colombiana</span>
+                  <span className="font-semibold text-gray-800">Calidez caleña</span>
                 </div>
                 <div className="flex flex-col items-center text-center p-5 bg-white/60 backdrop-blur-sm rounded-lg">
                   <Shield className="w-10 h-10 text-amber-500 mb-3" />

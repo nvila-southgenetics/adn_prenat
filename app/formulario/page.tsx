@@ -59,7 +59,7 @@ export default function FormularioPage() {
           semana: formData.semana,
           acceptSMS: formData.acceptSMS,
           acceptInfo: formData.acceptInfo,
-          pais: 'Colombia'
+          pais: 'Cali'
         })
       })
 
@@ -446,10 +446,16 @@ export default function FormularioPage() {
                   </div>
 
                   <div className="space-y-6 text-gray-700">
+                    {/* Precio arriba */}
+                    <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
+                      <p className="font-semibold text-lg text-gray-900 mb-1">Costo</p>
+                      <p className="text-ocean-700 font-bold text-xl">$1,199 USD</p>
+                    </div>
+
                     <div>
                       <h3 className="font-semibold text-lg mb-2 text-gray-900">¿Cómo se realiza?</h3>
                       <p className="leading-relaxed">
-                        El estudio se realiza mediante una extracción de sangre a la mamá (que no requiere ayuno ni preparación previa) y un hisopado al presunto padre. Se puede realizar a partir de la <span className="underline">semana 7 de embarazo</span>.
+                        El estudio se realiza mediante una extracción de sangre a la mamá (que no requiere ayuno ni preparación previa) y un hisopado al presunto padre. Se puede realizar a partir de las <span className="underline font-bold">7 semanas de embarazo</span>.
                       </p>
                     </div>
 
@@ -470,11 +476,6 @@ export default function FormularioPage() {
                         <li>Gestantes que hayan tenido una transfusión de sangre hace menos de dos años</li>
                         <li>Gestantes que se encuentren con toxemia gestacional o tumor</li>
                       </ul>
-                    </div>
-
-                    <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
-                      <p className="font-semibold text-lg text-gray-900 mb-1">Costo</p>
-                      <p className="text-ocean-700 font-bold text-xl">$1,199 USD</p>
                     </div>
                   </div>
 
