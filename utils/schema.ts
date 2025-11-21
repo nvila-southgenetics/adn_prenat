@@ -19,7 +19,7 @@ export const organizationSchema = {
   "sameAs": [
     "https://wa.me/573173644276"
   ],
-  "priceRange": "$1,490 USD",
+  "priceRange": "$1,199 USD",
   "medicalSpecialty": "Genetic Testing",
   "areaServed": {
     "@type": "Place",
@@ -46,7 +46,7 @@ export const organizationSchemaColombia = {
   "sameAs": [
     "https://wa.me/573173644276"
   ],
-  "priceRange": "$1,490 USD",
+  "priceRange": "$1,199 USD",
   "medicalSpecialty": "Genetic Testing",
   "areaServed": {
     "@type": "Country",
@@ -70,7 +70,7 @@ export const serviceSchema = {
   },
   "offers": {
     "@type": "Offer",
-    "price": "1490",
+    "price": "1199",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
     "description": "Incluye toma de muestras, análisis de laboratorio, certificado de resultados y envío seguro"
@@ -94,7 +94,7 @@ export const serviceSchemaColombia = {
   },
   "offers": {
     "@type": "Offer",
-    "price": "1490",
+    "price": "1199",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
     "description": "Incluye toma de muestras, análisis de laboratorio, informe con validez legal, entrega segura de resultados y acompañamiento de especialistas"
@@ -145,7 +145,7 @@ export const localBusinessSchemaColombia = {
     "opens": "08:00",
     "closes": "18:00"
   },
-  "priceRange": "$1,490 USD",
+  "priceRange": "$1,199 USD",
   "url": "https://paternidadprenatal.com/co"
 }
 

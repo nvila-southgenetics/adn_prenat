@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://paternidadprenatal.com'),
   title: 'Prueba de Paternidad Prenatal en Colombia - Test Paternidad Prenatal Colombia',
-  description: 'Test Paternidad Prenatal Colombia: pruebas de paternidad prenatal seguras, confidenciales y certificadas. Resultados en 10 días hábiles. Laboratorio en Cali. Precio $1,490 USD.',
+  description: 'Test Paternidad Prenatal Colombia: pruebas de paternidad prenatal seguras, confidenciales y certificadas. Resultados en 10 días hábiles. Laboratorio en Cali. Precio $1,199 USD.',
   keywords: 'prueba paternidad prenatal colombia, test paternidad prenatal cali, prueba adn prenatal colombia, prueba paternidad embarazo colombia, test paternidad bogota, prueba adn prenatal medellin, prueba paternidad prenatal precio colombia',
   alternates: {
     canonical: 'https://paternidadprenatal.com/',

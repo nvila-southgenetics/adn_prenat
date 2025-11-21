@@ -455,6 +455,11 @@ export default function FormularioCoPage() {
 
                     <div>
                       <h3 className="font-semibold text-lg mb-2 text-gray-900">Importante tener en cuenta</h3>
+                      <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg mb-3">
+                        <p className="text-red-700 font-semibold leading-relaxed">
+                          ⚠️ La prueba solo se realiza durante el embarazo, no en bebés nacidos.
+                        </p>
+                      </div>
                       <p className="mb-3 leading-relaxed">
                         Lamentablemente, no podemos realizar la prueba en los siguientes casos:
                       </p>
@@ -469,7 +474,7 @@ export default function FormularioCoPage() {
 
                     <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
                       <p className="font-semibold text-lg text-gray-900 mb-1">Inversión</p>
-                      <p className="text-ocean-700 font-bold text-xl">$1,490 USD</p>
+                      <p className="text-ocean-700 font-bold text-xl">$1,199 USD</p>
                     </div>
                   </div>
 
