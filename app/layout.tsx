@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { organizationSchemaColombia, serviceSchemaColombia, localBusinessSchemaColombia } from '@/utils/schema'
+import ElevenLabsWidget from '@/components/ElevenLabsWidget'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -119,8 +120,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <Analytics />
-        <elevenlabs-convai agent-id="agent_5401k8y01665evjb09r95z6scpsv"></elevenlabs-convai>
-        <Script src="https://unpkg.com/@elevenlabs/convai-widget-embed" strategy="afterInteractive" />
+        <ElevenLabsWidget />
       </body>
     </html>
   )
