@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Mail } from 'lucide-react'
+import { Menu, X, Phone, Mail, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
 import WhatsAppModal from './WhatsAppModal'
@@ -52,7 +52,7 @@ export default function Header() {
                   priority
                 />
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="hidden md:flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
                 <span>+57 317 364 4276</span>
@@ -63,8 +63,19 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block">
-              <span className="text-ocean-100">Lunes a viernes 8:00 - 18:00</span>
+            <div className="flex items-center gap-4">
+              <div className="hidden md:block">
+                <span className="text-ocean-100">Lunes a viernes 8:00 - 18:00</span>
+              </div>
+              {/* Botón WhatsApp para móviles */}
+              <button
+                type="button"
+                onClick={() => setShowWhatsAppModal(true)}
+                className="md:hidden bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 inline-flex items-center gap-2 text-sm"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
+              </button>
             </div>
           </div>
         </div>

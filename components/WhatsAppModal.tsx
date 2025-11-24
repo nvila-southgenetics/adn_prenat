@@ -37,8 +37,9 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
       (window as any).gtag_report_conversion()
     }
 
-    // Abrir WhatsApp
-    const whatsappUrl = 'https://wa.me/573173644276'
+    // Abrir WhatsApp con mensaje predefinido
+    const mensaje = 'Hola, quiero recibir más información sobre el test de paternidad prenatal.'
+    const whatsappUrl = `https://wa.me/573173644276?text=${encodeURIComponent(mensaje)}`
     window.open(whatsappUrl, '_blank')
     onClose()
   }
@@ -81,8 +82,14 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
                 <div className="space-y-6 text-gray-700">
                   {/* Precio arriba */}
                   <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
-                    <p className="font-semibold text-lg text-gray-900 mb-1">Inversión</p>
+                    <p className="font-semibold text-lg text-gray-900 mb-1">Precio de la prueba</p>
                     <p className="text-ocean-700 font-bold text-xl">$1,199 USD</p>
+                  </div>
+
+                  <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+                    <p className="text-red-700 font-semibold leading-relaxed">
+                      ⚠️ La prueba solo se realiza durante el embarazo, no en bebés nacidos.
+                    </p>
                   </div>
 
                   <div>
@@ -94,11 +101,6 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
 
                   <div>
                     <h3 className="font-semibold text-lg mb-2 text-gray-900">Importante tener en cuenta</h3>
-                    <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg mb-3">
-                      <p className="text-red-700 font-semibold leading-relaxed">
-                        ⚠️ La prueba solo se realiza durante el embarazo, no en bebés nacidos.
-                      </p>
-                    </div>
                     <p className="mb-3 leading-relaxed">
                       Lamentablemente, no podemos realizar la prueba en los siguientes casos:
                     </p>
