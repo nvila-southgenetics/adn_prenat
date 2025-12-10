@@ -39,7 +39,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
 
     // Abrir WhatsApp con mensaje predefinido
     const mensaje = 'Hola, quiero recibir más información sobre el test de paternidad prenatal.'
-    const whatsappUrl = `https://wa.me/573173644276?text=${encodeURIComponent(mensaje)}`
+    const whatsappUrl = `https://wa.me/573002315914?text=${encodeURIComponent(mensaje)}`
     window.open(whatsappUrl, '_blank')
     onClose()
   }

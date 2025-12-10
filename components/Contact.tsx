@@ -50,7 +50,7 @@ export default function Contact() {
         (window as any).gtag_report_conversion()
       }
 
-      const whatsappUrl = `https://wa.me/573173644276?text=${encodeURIComponent(mensaje)}`
+      const whatsappUrl = `https://wa.me/573002315914?text=${encodeURIComponent(mensaje)}`
       window.open(whatsappUrl, '_blank')
       
       // Limpiar formulario

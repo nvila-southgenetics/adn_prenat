@@ -17,7 +17,7 @@ export const organizationSchema = {
     "addressRegion": "Montevideo"
   },
   "sameAs": [
-    "https://wa.me/573173644276"
+    "https://wa.me/573002315914"
   ],
   "priceRange": "$1,199 USD",
   "medicalSpecialty": "Genetic Testing",
@@ -44,7 +44,7 @@ export const organizationSchemaColombia = {
     "addressRegion": "Valle del Cauca"
   },
   "sameAs": [
-    "https://wa.me/573173644276"
+    "https://wa.me/573002315914"
   ],
   "priceRange": "$1,199 USD",
   "medicalSpecialty": "Genetic Testing",
