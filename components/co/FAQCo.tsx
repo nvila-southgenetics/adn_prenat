@@ -10,6 +10,14 @@ import WhatsAppModal from '../WhatsAppModal'
 
 const faqs = [
   {
+    question: '¿Qué significa prenatal?',
+    answer: 'Prenatal significa “antes del nacimiento”. La prueba de paternidad prenatal se realiza mientras la mujer está embarazada, a partir de la semana 8 de gestación. No es para bebés ya nacidos ni para niños: es exclusivamente para determinar la paternidad durante el embarazo, de forma segura y no invasiva, desde nuestra sede en Cali.'
+  },
+  {
+    question: '¿Cuál es el precio?',
+    answer: 'El precio de la prueba de paternidad prenatal es de 1.190 USD. Incluye la toma de muestra, el análisis de laboratorio, el informe con validez legal y el acompañamiento de nuestros especialistas en Cali. No hay costos ocultos.'
+  },
+  {
     question: '¿Qué tan precisa es la prueba?',
     answer: 'La prueba de paternidad prenatal que realizamos en Cali tiene una precisión del 99.9%. Utilizamos la misma tecnología de laboratorio certificada que se emplea en clínicas de referencia mundial.'
   },
@@ -54,12 +62,12 @@ export default function FAQCo() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Preguntas frecuentes
           </h2>
-          <p className="text-xl text-ocean-100 max-w-3xl mx-auto">
+          <p className="text-lg text-ocean-100 max-w-3xl mx-auto">
             Lo esencial sobre nuestra prueba de paternidad prenatal en Cali
           </p>
         </motion.div>

@@ -11,7 +11,7 @@ export default function Hero() {
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-to-r from-white via-gray-50 to-gray-100 overflow-hidden pt-20 pb-16">
+    <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-to-r from-white via-gray-50 to-gray-100 overflow-hidden pt-16 pb-12">
       {/* Imagen de fondo a la derecha */}
       <div className="absolute inset-0 z-0">
         <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
@@ -34,11 +34,11 @@ export default function Hero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8 lg:pl-0 lg:pr-8 mt-24"
+            className="space-y-6 lg:pl-0 lg:pr-8 mt-16"
           >
             <div className="space-y-4">
               <motion.h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -49,7 +49,7 @@ export default function Hero() {
               </motion.h1>
               
               <motion.p 
-                className="text-xl md:text-2xl text-gray-700 leading-relaxed"
+                className="text-lg md:text-xl text-gray-700 leading-relaxed"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}

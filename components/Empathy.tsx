@@ -7,12 +7,12 @@ import { smoothScrollTo } from '@/utils/smoothScroll'
 
 export default function Empathy() {
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white via-orange-50/50 to-orange-50">
+    <section className="relative py-20 bg-gradient-to-b from-white via-orange-50/50 to-orange-50">
       {/* Gradiente adicional de desvanecido */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-yellow-50/30 to-amber-50/50 pointer-events-none"></div>
       <div className="relative z-10">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-[55%_45%] gap-16 items-center">
+        <div className="grid lg:grid-cols-[55%_45%] gap-12 items-center">
           {/* Imagen y testimonio */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -56,11 +56,11 @@ export default function Empathy() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="space-y-6">
+            <div className="space-y-4">
               <motion.h2 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -71,7 +71,7 @@ export default function Empathy() {
               </motion.h2>
               
               <motion.p 
-                className="text-xl md:text-2xl text-gray-700 leading-relaxed"
+                className="text-lg md:text-xl text-gray-700 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -83,7 +83,7 @@ export default function Empathy() {
             </div>
 
             <motion.div 
-              className="space-y-5 text-lg text-gray-700 leading-relaxed"
+              className="space-y-4 text-base text-gray-700 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -101,22 +101,22 @@ export default function Empathy() {
 
             {/* Valores destacados */}
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6"
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <div className="flex flex-col items-center text-center p-5 bg-white/60 backdrop-blur-sm rounded-lg">
-                <Heart className="w-10 h-10 text-orange-500 mb-3" />
+              <div className="flex flex-col items-center text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg">
+                <Heart className="w-8 h-8 text-orange-500 mb-2" />
                 <span className="font-semibold text-gray-800">Acompañamiento humano</span>
               </div>
-              <div className="flex flex-col items-center text-center p-5 bg-white/60 backdrop-blur-sm rounded-lg">
-                <Shield className="w-10 h-10 text-amber-500 mb-3" />
+              <div className="flex flex-col items-center text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg">
+                <Shield className="w-8 h-8 text-amber-500 mb-2" />
                 <span className="font-semibold text-gray-800">100% confidencial</span>
               </div>
-              <div className="flex flex-col items-center text-center p-5 bg-white/60 backdrop-blur-sm rounded-lg">
-                <Users className="w-10 h-10 text-yellow-600 mb-3" />
+              <div className="flex flex-col items-center text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg">
+                <Users className="w-8 h-8 text-yellow-600 mb-2" />
                 <span className="font-semibold text-gray-800">Profesionales expertos</span>
               </div>
             </motion.div>
@@ -129,11 +129,11 @@ export default function Empathy() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-12 text-center"
         >
           <a
             href="/formulario"
-            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-xl font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
           >
             Contáctanos
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -44,7 +44,7 @@ export default function HowItWorks() {
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
 
   return (
-    <section id="como-funciona" className="relative py-24 bg-gradient-to-b from-ocean-900 via-ocean-800 to-ocean-700 overflow-hidden text-white">
+    <section id="como-funciona" className="relative py-16 bg-gradient-to-b from-ocean-900 via-ocean-800 to-ocean-700 overflow-hidden text-white">
       <div className="container-custom">
         {/* Título de sección */}
         <motion.div
@@ -52,12 +52,12 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20 space-y-4"
+          className="text-center mb-12 space-y-3"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             ¿Cómo <span className="text-ocean-300">funciona?</span>
           </h2>
-          <p className="text-xl md:text-2xl text-ocean-100 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-ocean-100 max-w-3xl mx-auto">
             Un proceso simple y seguro en 3 pasos
           </p>
         </motion.div>
@@ -68,7 +68,7 @@ export default function HowItWorks() {
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-white/20 transform -translate-x-1/2 hidden lg:block"></div>
 
           {/* Steps */}
-          <div className="space-y-24">
+          <div className="space-y-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -109,7 +109,7 @@ export default function HowItWorks() {
                               </h3>
                             </div>
                           </div>
-                          <p className="text-lg text-gray-700 leading-relaxed">
+                          <p className="text-base text-gray-700 leading-relaxed">
                             {step.number === '01' ? (
                               <>
                                 Comunicate con nosotros por WhatsApp o completa nuestro formulario web.{' '}
@@ -129,18 +129,18 @@ export default function HowItWorks() {
                     <>
                       {/* Texto a la izquierda */}
                       <div className="relative pr-12">
-                        <div className="bg-white rounded-2xl p-8 shadow-xl">
-                          <div className="flex items-center gap-5 mb-6">
-                            <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center shadow-lg`}>
-                              <step.icon className="w-8 h-8 text-white" />
+                        <div className="bg-white rounded-2xl p-6 shadow-xl">
+                          <div className="flex items-center gap-4 mb-4">
+                            <div className={`w-14 h-14 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                              <step.icon className="w-7 h-7 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-3xl font-bold text-gray-900">
+                              <h3 className="text-2xl font-bold text-gray-900">
                                 {step.title}
                               </h3>
                             </div>
                           </div>
-                          <p className="text-lg text-gray-700 leading-relaxed">
+                          <p className="text-base text-gray-700 leading-relaxed">
                             {step.number === '01' ? (
                               <>
                                 Comunicate con nosotros por WhatsApp o completa nuestro formulario web.{' '}
@@ -174,7 +174,7 @@ export default function HowItWorks() {
 
                   {/* Círculo en el centro con número */}
                   <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                    <div className={`w-32 h-32 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center text-white font-black text-4xl shadow-2xl border-4 border-white`}>
+                    <div className={`w-28 h-28 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center text-white font-black text-3xl shadow-2xl border-4 border-white`}>
                       {step.number}
                     </div>
                   </div>
@@ -247,13 +247,13 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-24 text-center"
+          className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl p-8 md:p-12 shadow-2xl text-white max-w-3xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl p-6 md:p-8 shadow-2xl text-white max-w-3xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3">
               ¿Listo para comenzar?
             </h3>
-            <p className="text-blue-100 text-lg mb-8">
+            <p className="text-blue-100 text-base mb-6">
               Contactanos ahora y da el primer paso hacia la tranquilidad que necesitas.
             </p>
             

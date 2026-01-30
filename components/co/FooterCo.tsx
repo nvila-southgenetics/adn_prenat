@@ -16,7 +16,7 @@ export default function FooterCo() {
   return (
     <div>
     <footer className="bg-navy-900 text-white">
-      <div className="container-custom py-16">
+      <div className="container-custom py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -33,7 +33,7 @@ export default function FooterCo() {
                 height={50}
                 className="h-10 w-auto object-contain"
               />
-              <h3 className="text-2xl font-bold gradient-text">
+              <h3 className="text-xl font-bold gradient-text">
                 Paternidad Prenatal Cali
               </h3>
             </div>

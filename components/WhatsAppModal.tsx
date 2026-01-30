@@ -83,7 +83,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
                   {/* Precio arriba */}
                   <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
                     <p className="font-semibold text-lg text-gray-900 mb-1">Precio de la prueba</p>
-                    <p className="text-ocean-700 font-bold text-xl">$1,199 USD</p>
+                    <p className="text-ocean-700 font-bold text-xl">$1.190 USD</p>
                   </div>
 
                   <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">

@@ -7,11 +7,11 @@ import { smoothScrollTo } from '@/utils/smoothScroll'
 
 export default function EmpathyCo() {
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white via-orange-50/50 to-orange-50">
+    <section className="relative py-20 bg-gradient-to-b from-white via-orange-50/50 to-orange-50">
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-yellow-50/30 to-amber-50/50 pointer-events-none"></div>
       <div className="relative z-10">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-[55%_45%] gap-16 items-center">
+          <div className="grid lg:grid-cols-[55%_45%] gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -50,9 +50,9 @@ export default function EmpathyCo() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6"
             >
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <motion.h2 
                   className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
                   initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export default function EmpathyCo() {
                 </motion.h2>
                 
                 <motion.p 
-                  className="text-xl md:text-2xl text-gray-700 leading-relaxed"
+                  className="text-lg md:text-xl text-gray-700 leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

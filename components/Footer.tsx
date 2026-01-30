@@ -17,7 +17,7 @@ export default function Footer() {
     <div>
     <footer className="bg-navy-900 text-white">
       {/* Contenido principal */}
-      <div className="container-custom py-16">
+      <div className="container-custom py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Información de la empresa */}
           <motion.div
@@ -35,7 +35,7 @@ export default function Footer() {
                 height={50}
                 className="h-10 w-auto object-contain"
               />
-              <h3 className="text-2xl font-bold gradient-text">
+              <h3 className="text-xl font-bold gradient-text">
                 Test Paternidad Prenatal
               </h3>
             </div>

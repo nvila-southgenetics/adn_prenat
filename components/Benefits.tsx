@@ -45,21 +45,21 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section id="beneficios" className="py-32 bg-white">
+    <section id="beneficios" className="py-20 bg-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
             ¿Por qué elegirnos?
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
@@ -70,11 +70,11 @@ export default function Benefits() {
               className="group text-center"
             >
               <div className="space-y-4">
-                <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-full flex items-center justify-center mx-auto transition-transform duration-300 group-hover:scale-110`}>
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className={`w-14 h-14 bg-gradient-to-br ${benefit.color} rounded-full flex items-center justify-center mx-auto transition-transform duration-300 group-hover:scale-110`}>
+                  <benefit.icon className="w-7 h-7 text-white" />
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-lg font-bold text-gray-900">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -91,23 +91,23 @@ export default function Benefits() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-r from-ocean-600 to-ocean-800 rounded-3xl p-8 md:p-12 text-white"
+          className="mt-12 bg-gradient-to-r from-ocean-600 to-ocean-800 rounded-2xl p-6 md:p-8 text-white"
         >
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">5,000+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">5,000+</div>
               <div className="text-ocean-100">Pruebas realizadas</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">99.9%</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">99.9%</div>
               <div className="text-ocean-100">Precisión garantizada</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">10</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">10</div>
               <div className="text-ocean-100">Días hábiles para resultados</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">L-V</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">L-V</div>
               <div className="text-ocean-100">8:00 - 18:00</div>
             </div>
           </div>
@@ -119,11 +119,11 @@ export default function Benefits() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-10 text-center"
         >
           <a
             href="/sobre-nosotros"
-            className="bg-ocean-600 hover:bg-ocean-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+            className="bg-ocean-600 hover:bg-ocean-700 text-white px-6 py-3 rounded-xl font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
           >
             Sobre Nosotros
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

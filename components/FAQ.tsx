@@ -10,6 +10,14 @@ import WhatsAppModal from './WhatsAppModal'
 
 const faqs = [
   {
+    question: '¿Qué significa prenatal?',
+    answer: 'Prenatal significa “antes del nacimiento”. Nuestra prueba de paternidad prenatal se realiza mientras la mujer está embarazada, a partir de la semana 7 u 8 de gestación. No es para bebés ya nacidos ni para niños: es exclusivamente para determinar la paternidad durante el embarazo, de forma segura y no invasiva.'
+  },
+  {
+    question: '¿Cuál es el precio?',
+    answer: 'El precio de la prueba de paternidad prenatal es de 1.190 USD. Incluye la toma de muestra, el análisis de laboratorio, el certificado de resultados y el acompañamiento durante todo el proceso. No hay costos ocultos.'
+  },
+  {
     question: '¿Qué tan precisa es la prueba?',
     answer: 'Nuestra prueba de paternidad prenatal tiene una precisión del 99.9%, utilizando tecnología de vanguardia y análisis de ADN fetal libre en sangre materna. Es la misma tecnología utilizada en hospitales de primer nivel mundial.'
   },
@@ -66,12 +74,12 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Preguntas frecuentes
           </h2>
-          <p className="text-xl text-ocean-100 max-w-3xl mx-auto">
+          <p className="text-lg text-ocean-100 max-w-3xl mx-auto">
             Resolvemos las dudas más comunes sobre nuestra prueba de paternidad prenatal
           </p>
         </motion.div>
@@ -89,9 +97,9 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  <h3 className="text-base font-semibold text-gray-900 pr-4">
                     {faq.question}
                   </h3>
                   <motion.div
@@ -111,7 +119,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-8 pb-6">
+                      <div className="px-6 pb-4">
                         <p className="text-gray-600 leading-relaxed">
                           {faq.answer}
                         </p>
@@ -130,18 +138,18 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center mt-10"
         >
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center">
-                <HelpCircle className="w-8 h-8 text-ocean-600" />
+          <div className="bg-white rounded-2xl p-6 shadow-lg max-w-2xl mx-auto">
+            <div className="flex justify-center mb-4">
+              <div className="w-14 h-14 bg-ocean-100 rounded-full flex items-center justify-center">
+                <HelpCircle className="w-7 h-7 text-ocean-600" />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
               ¿Tienes más preguntas?
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 text-sm mb-4">
               Nuestro equipo de especialistas está disponible de lunes a viernes de 8:00 a 18:00 para resolver todas tus dudas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

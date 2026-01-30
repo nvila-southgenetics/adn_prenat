@@ -88,7 +88,7 @@ export default function Header() {
             {/* Logo */}
             <div className="flex items-center">
               <a href="/">
-                <h1 className="text-2xl font-bold gradient-text">
+                <h1 className="text-xl font-bold gradient-text">
                   Test Paternidad Prenatal
                 </h1>
               </a>

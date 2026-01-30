@@ -74,7 +74,7 @@ export default function HeaderCo() {
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <a href="/co">
-                <h1 className="text-2xl font-bold gradient-text">
+                <h1 className="text-xl font-bold gradient-text">
                   Paternidad Prenatal Cali
                 </h1>
               </a>

@@ -44,19 +44,19 @@ export default function HowItWorksCo() {
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
 
   return (
-    <section id="como-funciona" className="relative py-24 bg-gradient-to-b from-ocean-900 via-ocean-800 to-ocean-700 overflow-hidden text-white">
+    <section id="como-funciona" className="relative py-16 bg-gradient-to-b from-ocean-900 via-ocean-800 to-ocean-700 overflow-hidden text-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20 space-y-4"
+          className="text-center mb-12 space-y-3"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             ¿Cómo <span className="text-ocean-300">funciona?</span>
           </h2>
-          <p className="text-xl md:text-2xl text-ocean-100 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-ocean-100 max-w-3xl mx-auto">
             Un proceso simple y seguro en 3 pasos, coordinado desde nuestra sede en Cali
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ export default function HowItWorksCo() {
         <div className="relative max-w-6xl mx-auto">
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-white/20 transform -translate-x-1/2 hidden lg:block"></div>
 
-          <div className="space-y-24">
+          <div className="space-y-16">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -228,7 +228,7 @@ export default function HowItWorksCo() {
           className="mt-24 text-center"
         >
           <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl p-8 md:p-12 shadow-2xl text-white max-w-3xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3">
               ¿Listo para comenzar?
             </h3>
             <p className="text-blue-100 text-lg mb-8">
