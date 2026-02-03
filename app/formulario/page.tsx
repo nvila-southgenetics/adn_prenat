@@ -4,6 +4,9 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, ChevronRight, Phone, User, Mail, Calendar, FileText, X } from 'lucide-react'
 import Image from 'next/image'
+import { countries } from '@/config/countries.config'
+
+const country = countries.co
 
 export default function FormularioPage() {
   const [step, setStep] = useState(1)
@@ -449,7 +452,7 @@ export default function FormularioPage() {
                     {/* Precio arriba */}
                     <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
                       <p className="font-semibold text-lg text-gray-900 mb-1">Costo</p>
-                      <p className="text-ocean-700 font-bold text-xl">$1,199 USD</p>
+                      <p className="text-ocean-700 font-bold text-xl">{country.priceDisplay} {country.currency}</p>
                     </div>
 
                     <div>
