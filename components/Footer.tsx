@@ -5,8 +5,14 @@ import { motion } from 'framer-motion'
 import { MessageCircle, Shield, Phone, Mail, MapPin, ArrowUp } from 'lucide-react'
 import Image from 'next/image'
 import WhatsAppModal from './WhatsAppModal'
+import CountrySelector from './CountrySelector'
+import { countries, type CountryConfig } from '@/config/countries.config'
 
-export default function Footer() {
+interface FooterProps {
+  country?: CountryConfig
+}
+
+export default function Footer({ country = countries.co }: FooterProps) {
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
   
   const scrollToTop = () => {
@@ -40,8 +46,12 @@ export default function Footer() {
               </h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Pruebas de paternidad prenatal precisas y seguras para familias en todo el mundo.
-              Utilizamos tecnología de vanguardia para brindarte resultados confiables y confidenciales sin importar el país donde te encuentres.
+              {country.code === 'co' 
+                ? 'Pruebas de paternidad prenatal precisas y seguras para familias en todo el mundo. Utilizamos tecnología de vanguardia para brindarte resultados confiables y confidenciales sin importar el país donde te encuentres.'
+                : country.code === 'ar'
+                ? `Pruebas de paternidad prenatal precisas y seguras para familias en ${country.name}. Utilizamos tecnología de vanguardia para brindarte resultados confiables y confidenciales en Buenos Aires y Belgrano.`
+                : `Pruebas de paternidad prenatal precisas y seguras para familias en ${country.name}. Utilizamos tecnología de vanguardia para brindarte resultados confiables y confidenciales en Caracas solamente.`
+              }
             </p>
             
             {/* Características destacadas */}
@@ -90,6 +100,12 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+
+              {/* Selector de país */}
+            <div className="mt-6">
+              <p className="text-sm text-gray-400 mb-2">Cambiar país</p>
+              <CountrySelector currentCountry={country} variant="footer" />
+            </div>
           </motion.div>
 
           {/* Información de contacto */}
@@ -103,15 +119,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent-400" />
-                <span className="text-gray-300">+57 317 364 4276</span>
+                <span className="text-gray-300">{country.phone}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent-400" />
-                <span className="text-gray-300">cjflorez@southgenetics.com</span>
+                <span className="text-gray-300">{country.email}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent-400" />
-                <span className="text-gray-300">Cali</span>
+                <span className="text-gray-300">{country.mainCity}{country.code !== 'co' ? `, ${country.name}` : ''}</span>
               </div>
             </div>
 
@@ -142,7 +158,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-gray-400 text-sm"
             >
-              <p>&copy; 2024 Test ADN Prenatal. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Test ADN Prenatal{country.code !== 'co' ? ` ${country.name}` : ''}. Todos los derechos reservados.</p>
             </motion.div>
 
             {/* Certificaciones */}
@@ -178,7 +194,7 @@ export default function Footer() {
       </div>
     </footer>
 
-    <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} country={country} />
   </div>
   )
 }

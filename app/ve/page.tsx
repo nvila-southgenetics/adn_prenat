@@ -11,11 +11,12 @@ import ContactCTA from '@/components/ContactCTA'
 import Footer from '@/components/Footer'
 import { countries } from '@/config/countries.config'
 
-export default function Home() {
-  const country = countries.co
+export default function VenezuelaPage() {
+  const country = countries.ve
+  
   return (
     <main className="min-h-screen">
-      <Header />
+      <Header country={country} />
       <Hero country={country} />
       <Allies />
       <Empathy country={country} />

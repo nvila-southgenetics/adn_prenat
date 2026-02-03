@@ -6,13 +6,19 @@ import { Menu, X, Phone, Mail, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
 import WhatsAppModal from './WhatsAppModal'
+import CountrySelector from './CountrySelector'
+import { countries, type CountryConfig } from '@/config/countries.config'
 
-export default function Header() {
+interface HeaderProps {
+  country?: CountryConfig
+}
+
+export default function Header({ country = countries.co }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
-  const isHomePage = pathname === '/'
+  const isHomePage = pathname === country.urlPrefix || pathname === `${country.urlPrefix}/`
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +33,7 @@ export default function Header() {
       smoothScrollTo(sectionId, 1200)
       setIsMenuOpen(false)
     } else {
-      window.location.href = `/#${sectionId}`
+      window.location.href = `${country.urlPrefix}/#${sectionId}`
     }
   }
 
@@ -55,18 +61,20 @@ export default function Header() {
               <div className="hidden md:flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                <span>+57 317 364 4276</span>
+                <span>{country.phone}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>cjflorez@southgenetics.com</span>
+                <span>{country.email}</span>
                 </div>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <div className="hidden md:block">
-                <span className="text-ocean-100">Lunes a viernes 8:00 - 18:00</span>
+                <span className="text-ocean-100">{country.businessHours}</span>
               </div>
+              {/* Selector de país */}
+              <CountrySelector currentCountry={country} variant="header" />
               {/* Botón WhatsApp para móviles */}
               <button
                 type="button"
@@ -87,7 +95,7 @@ export default function Header() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center">
-              <a href="/">
+              <a href={country.urlPrefix || '/'}>
                 <h1 className="text-xl font-bold gradient-text">
                   Test Paternidad Prenatal
                 </h1>
@@ -112,6 +120,12 @@ export default function Header() {
                 onClick={() => handleNavClick('beneficios')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
+                Precio
+              </button>
+              <button 
+                onClick={() => handleNavClick('beneficios')}
+                className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
+              >
                 Beneficios
               </button>
               <button 
@@ -121,7 +135,7 @@ export default function Header() {
                 FAQs
               </button>
               <a
-                href="/sobre-nosotros"
+                href={`${country.urlPrefix}/sobre-nosotros`}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
                 Sobre nosotros
@@ -174,6 +188,12 @@ export default function Header() {
                   onClick={() => handleNavClick('beneficios')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
+                  Precio
+                </button>
+                <button 
+                  onClick={() => handleNavClick('beneficios')}
+                  className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
+                >
                   Beneficios
                 </button>
                 <button 
@@ -183,7 +203,7 @@ export default function Header() {
                   FAQs
                 </button>
                 <a
-                  href="/sobre-nosotros"
+                  href={`${country.urlPrefix}/sobre-nosotros`}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
                   Sobre nosotros
@@ -207,7 +227,7 @@ export default function Header() {
         </div>
       </nav>
 
-      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} country={country} />
     </header>
   )
 }

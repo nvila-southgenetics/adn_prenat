@@ -9,8 +9,10 @@ import Benefits from '@/components/Benefits'
 import FAQCo from '@/components/co/FAQCo'
 import ContactCTACo from '@/components/co/ContactCTACo'
 import FooterCo from '@/components/co/FooterCo'
+import { countries } from '@/config/countries.config'
 
 export default function ColombiaPage() {
+  const country = countries.co
   return (
     <main className="min-h-screen">
       <HeaderCo />
@@ -20,7 +22,7 @@ export default function ColombiaPage() {
       <Experience />
       <HowItWorksCo />
       <GlobalTrust />
-      <Benefits />
+      <Benefits country={country} />
       <FAQCo />
       <ContactCTACo />
       <FooterCo />

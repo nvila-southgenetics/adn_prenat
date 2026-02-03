@@ -2,8 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { countries, type CountryConfig } from '@/config/countries.config'
 
-export default function ContactCTA() {
+interface ContactCTAProps {
+  country?: CountryConfig
+}
+
+export default function ContactCTA({ country = countries.co }: ContactCTAProps) {
   return (
     <section id="contacto" className="relative py-16 bg-white overflow-hidden">
       <div className="container-custom">
@@ -24,7 +29,7 @@ export default function ContactCTA() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <a
-              href="/formulario"
+              href={`${country.urlPrefix}/formulario`}
               className="bg-ocean-600 hover:bg-ocean-700 text-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-xl group"
             >
               Iniciar formulario

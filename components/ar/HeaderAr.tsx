@@ -2,17 +2,20 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Mail } from 'lucide-react'
+import { Menu, X, Phone, Mail, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
-import WhatsAppModal from '../WhatsAppModal'
+import { countries } from '@/config/countries.config'
+import WhatsAppModalAr from './WhatsAppModalAr'
+import CountrySelector from '../CountrySelector'
 
-export default function HeaderCo() {
+export default function HeaderAr() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
-  const isHomePage = pathname === '/co'
+  const isHomePage = pathname === '/ar' || pathname === '/ar/'
+  const country = countries.ar
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +30,7 @@ export default function HeaderCo() {
       smoothScrollTo(sectionId, 1200)
       setIsMenuOpen(false)
     } else {
-      window.location.href = `/co#${sectionId}`
+      window.location.href = `/ar/#${sectionId}`
     }
   }
 
@@ -37,6 +40,7 @@ export default function HeaderCo() {
         ? 'bg-white/95 backdrop-blur-md shadow-lg' 
         : 'bg-white shadow-sm'
     }`}>
+      {/* Barra superior con contacto */}
       <div className="bg-ocean-700 text-white py-2">
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
@@ -44,42 +48,57 @@ export default function HeaderCo() {
               <div className="bg-sky-100 px-2 py-1 rounded">
                 <Image
                   src="/imgs/logo.png"
-                  alt="SouthGenetics - Paternidad Prenatal Cali - Laboratorio certificado en Cali"
+                  alt="SouthGenetics - Test Paternidad Prenatal Argentina"
                   width={100}
                   height={30}
                   className="h-6 w-auto object-contain"
                   priority
                 />
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="hidden md:flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>+57 317 364 4276</span>
+                  <span>{country.phone}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
-                  <span>cjflorez@southgenetics.com</span>
+                  <span>{country.email}</span>
                 </div>
               </div>
             </div>
-            <div className="hidden md:block">
-              <span className="text-ocean-100">Laboratorio certificado en Cali</span>
+            <div className="flex items-center gap-4">
+              <div className="hidden md:block">
+                <span className="text-ocean-100">{country.businessHours}</span>
+              </div>
+              <CountrySelector currentCountry={country} variant="header" />
+              {/* Botón WhatsApp para móviles */}
+              <button
+                type="button"
+                onClick={() => setShowWhatsAppModal(true)}
+                className="md:hidden bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 inline-flex items-center gap-2 text-sm"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
+              </button>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Navegación principal */}
       <nav className="py-4">
         <div className="container-custom">
           <div className="flex justify-between items-center">
+            {/* Logo */}
             <div className="flex items-center">
-              <a href="/co">
+              <a href="/ar">
                 <h1 className="text-xl font-bold gradient-text">
-                  Paternidad Prenatal Cali
+                  Test Paternidad Prenatal
                 </h1>
               </a>
             </div>
 
+            {/* Menú desktop */}
             <div className="hidden lg:flex items-center space-x-8">
               <button 
                 onClick={() => handleNavClick('inicio')}
@@ -109,10 +128,10 @@ export default function HeaderCo() {
                 onClick={() => handleNavClick('faqs')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
-                Preguntas
+                FAQs
               </button>
               <a
-                href="/co/sobre-nosotros"
+                href="/ar/sobre-nosotros"
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
                 Sobre nosotros
@@ -121,7 +140,7 @@ export default function HeaderCo() {
                 onClick={() => handleNavClick('contacto')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
               >
-                Contáctanos
+                Contacto
               </button>
               <button
                 type="button"
@@ -132,6 +151,7 @@ export default function HeaderCo() {
               </button>
             </div>
 
+            {/* Botón menú móvil */}
             <button
               className="lg:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -144,6 +164,7 @@ export default function HeaderCo() {
             </button>
           </div>
 
+          {/* Menú móvil */}
           {isMenuOpen && (
             <div className="lg:hidden mt-4 py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-4">
@@ -175,10 +196,10 @@ export default function HeaderCo() {
                   onClick={() => handleNavClick('faqs')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
-                  Preguntas
+                  FAQs
                 </button>
                 <a
-                  href="/co/sobre-nosotros"
+                  href="/ar/sobre-nosotros"
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
                   Sobre nosotros
@@ -187,7 +208,7 @@ export default function HeaderCo() {
                   onClick={() => handleNavClick('contacto')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
                 >
-                  Contáctanos
+                  Contacto
                 </button>
                 <button
                   type="button"
@@ -202,8 +223,7 @@ export default function HeaderCo() {
         </div>
       </nav>
 
-      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+      <WhatsAppModalAr isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
     </header>
   )
 }
-

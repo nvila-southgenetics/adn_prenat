@@ -4,8 +4,13 @@ import { motion } from 'framer-motion'
 import { Heart, Shield, Users } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
+import { countries, type CountryConfig } from '@/config/countries.config'
 
-export default function Empathy() {
+interface EmpathyProps {
+  country?: CountryConfig
+}
+
+export default function Empathy({ country = countries.co }: EmpathyProps) {
   return (
     <section className="relative py-20 bg-gradient-to-b from-white via-orange-50/50 to-orange-50">
       {/* Gradiente adicional de desvanecido */}
@@ -46,7 +51,9 @@ export default function Empathy() {
               <p className="text-gray-700 italic leading-relaxed">
                 "El equipo fue muy comprensivo y me explicó cada paso. Sentí respaldo profesional y humano desde la primera llamada."
               </p>
-              <p className="text-gray-600 text-sm mt-3">— Montevideo, Uruguay</p>
+              <p className="text-gray-600 text-sm mt-3">
+                {country.code === 'ar' ? '— Juana Martínez, CABA' : `— ${country.mainCity}, ${country.name}`}
+              </p>
             </motion.div>
           </motion.div>
 
@@ -70,16 +77,28 @@ export default function Empathy() {
                 <span className="text-orange-600">difícil</span>
               </motion.h2>
               
-              <motion.p 
-                className="text-lg md:text-xl text-gray-700 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                Dudas, ansiedad, miedo al qué dirán… son emociones completamente normales cuando no hay claridad.
-                Lo importante es que hoy existen <span className="font-bold text-orange-600">opciones seguras, rápidas y confidenciales</span> para ayudarte a recuperar la tranquilidad que necesitas.
-              </motion.p>
+              {country.code === 'ar' ? (
+                <motion.p 
+                  className="text-lg md:text-xl text-gray-700 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  Dudas, ansiedad, miedo… son emociones completamente normales cuando no hay claridad. Lo importante es que hoy existen <span className="font-bold text-orange-600">opciones seguras, rápidas y confidenciales</span> para ayudarte a recuperar la tranquilidad que necesitas.
+                </motion.p>
+              ) : (
+                <motion.p 
+                  className="text-lg md:text-xl text-gray-700 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  Dudas, ansiedad, miedo al qué dirán… son emociones completamente normales cuando no hay claridad.
+                  Lo importante es que hoy existen <span className="font-bold text-orange-600">opciones seguras, rápidas y confidenciales</span> para ayudarte a recuperar la tranquilidad que necesitas.
+                </motion.p>
+              )}
             </div>
 
             <motion.div 
@@ -90,8 +109,7 @@ export default function Empathy() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p>
-                Cada historia es diferente, pero todas comparten algo en común: la necesidad de saber.
-                En Test ADN Prenatal acompañamos a cientos de mujeres que, como tú, necesitan una respuesta clara sin poner en riesgo su embarazo.
+                Cada historia es diferente, pero todas comparten algo en común: la necesidad de saber. En Test ADN Prenatal acompañamos a cientos de mujeres que necesitan una respuesta clara sin poner en riesgo su embarazo.
               </p>
               
               <p>
@@ -132,10 +150,10 @@ export default function Empathy() {
           className="mt-12 text-center"
         >
           <a
-            href="/formulario"
+            href={`${country.urlPrefix}/formulario`}
             className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-xl font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
           >
-            Contáctanos
+            {country.code === 'ar' ? 'Contactanos' : 'Contáctanos'}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

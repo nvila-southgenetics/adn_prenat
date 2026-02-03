@@ -6,13 +6,22 @@ import { MessageCircle, Droplets, FileCheck } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
 import WhatsAppModal from './WhatsAppModal'
+import { countries, type CountryConfig } from '@/config/countries.config'
 
-const steps = [
+interface HowItWorksProps {
+  country?: CountryConfig
+}
+
+const getSteps = (country: CountryConfig) => [
   {
     number: '01',
     icon: MessageCircle,
     title: 'Contacto inicial',
-    description: 'Comunicate con nosotros por WhatsApp o completa nuestro formulario web. Estamos disponibles cualquier día a cualquier hora. Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.',
+    description: country.code === 'ar' 
+      ? 'Comunicate con nosotros por WhatsApp o completá nuestro formulario web. Estamos disponibles cualquier día a cualquier hora. Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.'
+      : country.code === 've'
+      ? 'Comunícate con nosotros por WhatsApp o completa nuestro formulario web. Estamos disponibles cualquier día a cualquier hora. Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.'
+      : 'Comunicate con nosotros por WhatsApp o completa nuestro formulario web. Estamos disponibles cualquier día a cualquier hora. Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.',
     image: '/imgs/contacto-inicialardo.png',
     imageAlt: 'Contacto inicial para prueba de paternidad prenatal - Formulario y WhatsApp disponible 24/7',
     color: 'from-blue-500 to-cyan-500',
@@ -40,8 +49,9 @@ const steps = [
   }
 ]
 
-export default function HowItWorks() {
+export default function HowItWorks({ country = countries.co }: HowItWorksProps) {
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
+  const steps = getSteps(country)
 
   return (
     <section id="como-funciona" className="relative py-16 bg-gradient-to-b from-ocean-900 via-ocean-800 to-ocean-700 overflow-hidden text-white">
@@ -110,17 +120,7 @@ export default function HowItWorks() {
                             </div>
                           </div>
                           <p className="text-base text-gray-700 leading-relaxed">
-                            {step.number === '01' ? (
-                              <>
-                                Comunicate con nosotros por WhatsApp o completa nuestro formulario web.{' '}
-                                <span className="font-bold text-blue-600">
-                                  Estamos disponibles cualquier día a cualquier hora.
-                                </span>{' '}
-                                Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.
-                              </>
-                            ) : (
-                              step.description
-                            )}
+                            {step.description}
                           </p>
                         </div>
                       </div>
@@ -141,17 +141,7 @@ export default function HowItWorks() {
                             </div>
                           </div>
                           <p className="text-base text-gray-700 leading-relaxed">
-                            {step.number === '01' ? (
-                              <>
-                                Comunicate con nosotros por WhatsApp o completa nuestro formulario web.{' '}
-                                <span className="font-bold text-blue-600">
-                                  Estamos disponibles cualquier día a cualquier hora.
-                                </span>{' '}
-                                Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.
-                              </>
-                            ) : (
-                              step.description
-                            )}
+                            {step.description}
                           </p>
                         </div>
                       </div>
@@ -220,17 +210,7 @@ export default function HowItWorks() {
                           </div>
                         </div>
                         <p className="text-gray-700 leading-relaxed">
-                          {step.number === '01' ? (
-                            <>
-                              Comunicate con nosotros por WhatsApp o completa nuestro formulario web.{' '}
-                              <span className="font-bold text-blue-600">
-                                Estamos disponibles cualquier día a cualquier hora.
-                              </span>{' '}
-                              Te responderemos de inmediato para resolver todas tus dudas y coordinar el siguiente paso de forma personalizada.
-                            </>
-                          ) : (
-                            step.description
-                          )}
+                          {step.description}
                         </p>
                       </div>
                     </div>
@@ -267,7 +247,7 @@ export default function HowItWorks() {
                 Contactar por WhatsApp
               </button>
               <a
-                href="/formulario"
+                href={`${country.urlPrefix}/formulario`}
                 className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center shadow-lg text-lg"
               >
                 Ir al formulario
@@ -280,7 +260,7 @@ export default function HowItWorks() {
         </motion.div>
       </div>
 
-      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} country={country} />
     </section>
   )
 }

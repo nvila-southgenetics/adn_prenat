@@ -3,13 +3,15 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, MessageCircle } from 'lucide-react'
+import { countries, type CountryConfig } from '@/config/countries.config'
 
 interface WhatsAppModalProps {
   isOpen: boolean
   onClose: () => void
+  country?: CountryConfig
 }
 
-export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
+export default function WhatsAppModal({ isOpen, onClose, country = countries.co }: WhatsAppModalProps) {
   // Scroll al inicio cuando se abre el modal
   useEffect(() => {
     if (isOpen) {
@@ -39,7 +41,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
 
     // Abrir WhatsApp con mensaje predefinido
     const mensaje = 'Hola, quiero recibir más información sobre el test de paternidad prenatal.'
-    const whatsappUrl = `https://wa.me/573002315914?text=${encodeURIComponent(mensaje)}`
+    const whatsappUrl = `https://wa.me/${country.whatsappNumber}?text=${encodeURIComponent(mensaje)}`
     window.open(whatsappUrl, '_blank')
     onClose()
   }
@@ -83,7 +85,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
                   {/* Precio arriba */}
                   <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
                     <p className="font-semibold text-lg text-gray-900 mb-1">Precio de la prueba</p>
-                    <p className="text-ocean-700 font-bold text-xl">$1.190 USD</p>
+                    <p className="text-ocean-700 font-bold text-xl">{country.priceDisplay}</p>
                   </div>
 
                   <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
@@ -95,7 +97,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
                   <div>
                     <h3 className="font-semibold text-lg mb-2 text-gray-900">¿Cómo funciona la prueba?</h3>
                     <p className="leading-relaxed">
-                      La prueba es muy sencilla: solo necesitamos una muestra de sangre de la mamá (no requiere ayuno ni preparación previa) y un hisopado del presunto padre. Lo mejor es que puedes realizarla desde las <span className="underline font-bold">7 semanas de embarazo</span>.
+                      La prueba es muy sencilla: solo necesitamos una muestra de sangre de la {country.terms.mom} (no requiere ayuno ni preparación previa) y un hisopado del presunto padre. Lo mejor es que puedes realizarla desde las <span className="underline font-bold">7 semanas de embarazo</span>.
                     </p>
                   </div>
 

@@ -7,15 +7,24 @@ import Script from 'next/script'
 import { smoothScrollTo } from '@/utils/smoothScroll'
 import { faqSchema } from '@/utils/schema'
 import WhatsAppModal from './WhatsAppModal'
+import { countries, type CountryConfig } from '@/config/countries.config'
 
-const faqs = [
+interface FAQProps {
+  country?: CountryConfig
+}
+
+const getFaqs = (country: CountryConfig) => [
   {
     question: '¿Qué significa prenatal?',
     answer: 'Prenatal significa “antes del nacimiento”. Nuestra prueba de paternidad prenatal se realiza mientras la mujer está embarazada, a partir de la semana 7 u 8 de gestación. No es para bebés ya nacidos ni para niños: es exclusivamente para determinar la paternidad durante el embarazo, de forma segura y no invasiva.'
   },
   {
     question: '¿Cuál es el precio?',
-    answer: 'El precio de la prueba de paternidad prenatal es de 1.190 USD. Incluye la toma de muestra, el análisis de laboratorio, el certificado de resultados y el acompañamiento durante todo el proceso. No hay costos ocultos.'
+    answer: country.code === 'ar'
+      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio, el informe con validez legal y el acompañamiento de nuestros especialistas. Aceptamos Mercado Pago, transferencia bancaria, tarjetas y otros medios de pago locales.`
+      : country.code === 've'
+      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio, el informe con validez legal y el acompañamiento de nuestros especialistas. Aceptamos pagos en dólares mediante Zelle, PayPal, transferencia bancaria internacional y criptomonedas.`
+      : `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio, el certificado de resultados y el acompañamiento durante todo el proceso. No hay costos ocultos.`
   },
   {
     question: '¿Qué tan precisa es la prueba?',
@@ -23,7 +32,9 @@ const faqs = [
   },
   {
     question: '¿Cuánto tardan los resultados?',
-    answer: 'Los resultados están listos en aproximadamente 10 días hábiles después de recibir la muestra en nuestro laboratorio. Te notificaremos inmediatamente cuando estén disponibles y los enviaremos de forma segura y confidencial.'
+    answer: country.code === 've'
+      ? `Aproximadamente ${country.deliveryDays} desde que recibimos la muestra en el laboratorio. Te avisamos apenas estén listos y los enviamos de manera segura y confidencial.`
+      : `Aproximadamente ${country.deliveryDays} desde que recibimos la muestra en el laboratorio. Te avisamos apenas estén listos y los enviamos de manera segura y confidencial.`
   },
   {
     question: '¿Es segura para el bebé?',
@@ -31,7 +42,11 @@ const faqs = [
   },
   {
     question: '¿Cómo se paga?',
-    answer: 'Aceptamos pagos en línea con tarjeta de crédito o débito a través de Stripe, así como transferencias bancarias. También ofrecemos planes de pago flexibles para tu comodidad.'
+    answer: country.code === 'ar'
+      ? `Aceptamos Mercado Pago (tarjetas, transferencia, efectivo en Rapipago/Pago Fácil), transferencias bancarias en pesos o dólares, y tarjetas de crédito/débito. También ofrecemos planes de pago flexibles.`
+      : country.code === 've'
+      ? `Aceptamos Zelle, PayPal, transferencia bancaria internacional en dólares, pago móvil y criptomonedas (Bitcoin, USDT). También ofrecemos planes de pago flexibles para facilitar el acceso.`
+      : 'Aceptamos pagos en línea con tarjeta de crédito o débito a través de Stripe, así como transferencias bancarias. También ofrecemos planes de pago flexibles para tu comodidad.'
   },
   {
     question: '¿Puedo hacerla en cualquier semana de embarazo?',
@@ -51,9 +66,10 @@ const faqs = [
   }
 ]
 
-export default function FAQ() {
+export default function FAQ({ country = countries.co }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
+  const faqs = getFaqs(country)
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -162,10 +178,10 @@ export default function FAQ() {
                 Consultar por WhatsApp
               </button>
               <a
-                href="/formulario"
+                href={`${country.urlPrefix}/formulario`}
                 className="btn-outline inline-flex items-center justify-center"
               >
-                Contáctanos
+                {country.code === 'ar' ? 'Contactanos' : 'Contáctanos'}
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -175,7 +191,7 @@ export default function FAQ() {
         </motion.div>
       </div>
 
-      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} country={country} />
     </section>
   )
 }

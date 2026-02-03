@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { organizationSchemaColombia, serviceSchemaColombia, localBusinessSchemaColombia } from '@/utils/schema'
 import ElevenLabsWidget from '@/components/ElevenLabsWidget'
+import GeoDetectionBanner from '@/components/GeoDetectionBanner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,8 +17,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://paternidadprenatal.com/',
     languages: {
-      es: 'https://paternidadprenatal.com/',
-      'es-co': 'https://paternidadprenatal.com/co/',
+      'es-CO': 'https://paternidadprenatal.com/',
+      'es-AR': 'https://paternidadprenatal.com/ar/',
+      'es-VE': 'https://paternidadprenatal.com/ve/',
     },
   },
   openGraph: {
@@ -55,6 +57,12 @@ export default function RootLayout({
         {/* Logo para Google Search Results */}
         <link rel="icon" href="/imgs/logo.png" />
         <link rel="apple-touch-icon" href="/imgs/logo.png" />
+        
+        {/* hreflang tags para SEO multi-país */}
+        <link rel="alternate" hrefLang="es-CO" href="https://paternidadprenatal.com/" />
+        <link rel="alternate" hrefLang="es-AR" href="https://paternidadprenatal.com/ar/" />
+        <link rel="alternate" hrefLang="es-VE" href="https://paternidadprenatal.com/ve/" />
+        <link rel="alternate" hrefLang="x-default" href="https://paternidadprenatal.com/" />
         {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17741877011"
@@ -118,6 +126,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <GeoDetectionBanner />
         {children}
         <Analytics />
         <ElevenLabsWidget />
