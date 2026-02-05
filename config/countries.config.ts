@@ -79,8 +79,8 @@ export const countries: Record<string, CountryConfig> = {
     fullName: 'Argentina',
     currency: 'USD',
     currencySymbol: 'US$',
-    phone: '+54 11 2345 6789', // TODO: Actualizar con número real
-    whatsappNumber: '5491123456789', // TODO: Actualizar con número real
+    phone: '+54 9 11 3164-6386',
+    whatsappNumber: '5491131646386',
     email: 'argentina@southgenetics.com',
     cities: ['Buenos Aires', 'Córdoba', 'Rosario', 'Mendoza', 'La Plata'],
     mainCity: 'Buenos Aires',
