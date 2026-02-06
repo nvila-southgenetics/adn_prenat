@@ -81,7 +81,7 @@ export const countries: Record<string, CountryConfig> = {
     currencySymbol: 'US$',
     phone: '+54 9 11 3164-6386',
     whatsappNumber: '5491131646386',
-    email: 'argentina@southgenetics.com',
+    email: 'sgonzales@southgenetics.com',
     cities: ['Buenos Aires', 'Córdoba', 'Rosario', 'Mendoza', 'La Plata'],
     mainCity: 'Buenos Aires',
     hreflang: 'es-AR',
@@ -92,7 +92,7 @@ export const countries: Record<string, CountryConfig> = {
     urlPrefix: '/ar',
     flag: '🇦🇷',
     paymentMethods: ['Transferencia bancaria', 'Mercado Pago', 'Tarjetas débito/crédito', 'Rapipago', 'Pago Fácil'],
-    businessHours: 'Lunes a viernes 9:00 - 18:00',
+    businessHours: 'Lunes a viernes 8:00 - 18:00',
     deliveryDays: '10 días hábiles',
     terms: {
       money: 'plata',

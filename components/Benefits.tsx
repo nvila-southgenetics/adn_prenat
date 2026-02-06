@@ -19,12 +19,6 @@ const includedServices = [
     color: 'from-green-500 to-green-600'
   },
   {
-    icon: FileText,
-    title: 'Informe con validez legal',
-    description: 'Documento oficial certificado que puede ser utilizado en procedimientos legales si lo necesitas',
-    color: 'from-purple-500 to-purple-600'
-  },
-  {
     icon: Headphones,
     title: 'Acompañamiento personalizado',
     description: 'Soporte humano y cercano durante todo el proceso, resolviendo cada duda con profesionales expertos',

@@ -4,7 +4,7 @@ import Allies from '@/components/Allies'
 import Experience from '@/components/Experience'
 import GlobalTrust from '@/components/GlobalTrust'
 import Empathy from '@/components/Empathy'
-import HowItWorks from '@/components/HowItWorks'
+import HowItWorksAr from '@/components/ar/HowItWorksAr'
 import Benefits from '@/components/Benefits'
 import FAQ from '@/components/FAQ'
 import ContactCTA from '@/components/ContactCTA'
@@ -21,7 +21,7 @@ export default function ArgentinaPage() {
       <Allies />
       <Empathy country={country} />
       <Experience />
-      <HowItWorks country={country} />
+      <HowItWorksAr />
       <GlobalTrust />
       <Benefits country={country} />
       <FAQ country={country} />

@@ -97,7 +97,7 @@ export const serviceSchemaColombia = {
     "price": "1199",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "description": "Incluye toma de muestras, análisis de laboratorio, informe con validez legal, entrega segura de resultados y acompañamiento de especialistas"
+    "description": "Incluye toma de muestras, análisis de laboratorio, entrega segura de resultados y acompañamiento de especialistas"
   },
   "category": "Medical Test"
 }

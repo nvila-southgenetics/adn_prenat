@@ -15,7 +15,15 @@ const faqs = [
   },
   {
     question: '¿Cuál es el precio?',
-    answer: 'El precio de la prueba de paternidad prenatal es de 1.190 USD. Incluye la toma de muestra, el análisis de laboratorio, el informe con validez legal y el acompañamiento de nuestros especialistas en Cali. No hay costos ocultos.'
+    answer: 'El precio de la prueba de paternidad prenatal es de 1.190 USD. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas en Cali. No hay costos ocultos.'
+  },
+  {
+    question: '¿Cómo puedo pagar?',
+    answer: 'Aceptamos transferencias bancarias, PSE, tarjetas débito y crédito, y opciones como Nequi o Daviplata. También contamos con planes de pago flexibles.'
+  },
+  {
+    question: '¿Qué incluye el precio?',
+    answer: 'Incluye la toma de muestras, el análisis de laboratorio, la entrega segura de resultados y el acompañamiento de nuestros especialistas en Cali.'
   },
   {
     question: '¿Qué tan precisa es la prueba?',
@@ -28,14 +36,6 @@ const faqs = [
   {
     question: '¿Es segura para el bebé?',
     answer: 'Sí. Solo requiere una muestra de sangre de la mamá, no es invasiva y no implica riesgos para el bebé. Puedes realizarla desde la semana 8 de embarazo.'
-  },
-  {
-    question: '¿Cómo puedo pagar?',
-    answer: 'Aceptamos transferencias bancarias, PSE, tarjetas débito y crédito, y opciones como Nequi o Daviplata. También contamos con planes de pago flexibles.'
-  },
-  {
-    question: '¿Qué incluye el precio?',
-    answer: 'Incluye la toma de muestras, el análisis de laboratorio, el informe con validez legal, la entrega segura de resultados y el acompañamiento de nuestros especialistas en Cali.'
   }
 ]
 

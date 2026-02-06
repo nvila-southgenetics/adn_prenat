@@ -14,7 +14,15 @@ const faqs = [
   },
   {
     question: '¿Cuál es el precio en Argentina?',
-    answer: 'El precio de la prueba de paternidad prenatal es de US$ 1.250. Incluye la toma de muestra, el análisis de laboratorio, el informe con validez legal y el acompañamiento de nuestros especialistas. Aceptamos Mercado Pago, transferencia bancaria, tarjetas y otros medios de pago locales.'
+    answer: 'El precio de la prueba de paternidad prenatal es de US$ 1.250. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas. Aceptamos Mercado Pago, transferencia bancaria, tarjetas y otros medios de pago locales.'
+  },
+  {
+    question: '¿Cómo puedo pagar en Argentina?',
+    answer: 'Aceptamos Mercado Pago (tarjetas, transferencia, efectivo en Rapipago/Pago Fácil), transferencias bancarias en pesos o dólares, y tarjetas de crédito/débito. También ofrecemos planes de pago flexibles.'
+  },
+  {
+    question: '¿Qué incluye el precio?',
+    answer: 'Incluye la toma de muestras, el análisis de laboratorio, la entrega segura de resultados y el acompañamiento de nuestros especialistas durante todo el proceso.'
   },
   {
     question: '¿Qué tan precisa es la prueba?',
@@ -27,14 +35,6 @@ const faqs = [
   {
     question: '¿Es segura para el bebé?',
     answer: 'Sí. Solo requiere una muestra de sangre de la mamá, no es invasiva y no implica riesgos para el bebé. Podés realizarla desde la semana 7 de embarazo de manera totalmente segura.'
-  },
-  {
-    question: '¿Cómo puedo pagar en Argentina?',
-    answer: 'Aceptamos Mercado Pago (tarjetas, transferencia, efectivo en Rapipago/Pago Fácil), transferencias bancarias en pesos o dólares, y tarjetas de crédito/débito. También ofrecemos planes de pago flexibles.'
-  },
-  {
-    question: '¿Qué incluye el precio?',
-    answer: 'Incluye la toma de muestras, el análisis de laboratorio, el informe con validez legal, la entrega segura de resultados y el acompañamiento de nuestros especialistas durante todo el proceso.'
   },
   {
     question: '¿Atienden en todo el país?',

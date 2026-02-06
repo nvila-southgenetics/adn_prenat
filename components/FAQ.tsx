@@ -21,10 +21,22 @@ const getFaqs = (country: CountryConfig) => [
   {
     question: '¿Cuál es el precio?',
     answer: country.code === 'ar'
-      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio, el informe con validez legal y el acompañamiento de nuestros especialistas. Aceptamos Mercado Pago, transferencia bancaria, tarjetas y otros medios de pago locales.`
+      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas. Aceptamos Mercado Pago, transferencia bancaria, tarjetas y otros medios de pago locales.`
       : country.code === 've'
-      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio, el informe con validez legal y el acompañamiento de nuestros especialistas. Aceptamos pagos en dólares mediante Zelle, PayPal, transferencia bancaria internacional y criptomonedas.`
+      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas. Aceptamos pagos en dólares mediante Zelle, PayPal, transferencia bancaria internacional y criptomonedas.`
       : `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio, el certificado de resultados y el acompañamiento durante todo el proceso. No hay costos ocultos.`
+  },
+  {
+    question: '¿Cómo se paga?',
+    answer: country.code === 'ar'
+      ? `Aceptamos Mercado Pago (tarjetas, transferencia, efectivo en Rapipago/Pago Fácil), transferencias bancarias en pesos o dólares, y tarjetas de crédito/débito. También ofrecemos planes de pago flexibles.`
+      : country.code === 've'
+      ? `Aceptamos Zelle, PayPal, transferencia bancaria internacional en dólares, pago móvil y criptomonedas (Bitcoin, USDT). También ofrecemos planes de pago flexibles para facilitar el acceso.`
+      : 'Aceptamos pagos en línea con tarjeta de crédito o débito a través de Stripe, así como transferencias bancarias. También ofrecemos planes de pago flexibles para tu comodidad.'
+  },
+  {
+    question: '¿Qué incluye el precio?',
+    answer: 'El precio incluye la toma de muestra, análisis de laboratorio, certificado de resultados, envío seguro de resultados y soporte durante todo el proceso. No hay costos ocultos.'
   },
   {
     question: '¿Qué tan precisa es la prueba?',
@@ -41,24 +53,12 @@ const getFaqs = (country: CountryConfig) => [
     answer: 'Sí, es completamente segura. Solo requiere una muestra de sangre de la madre, sin ningún riesgo para el bebé o la madre. No es invasiva y no afecta el desarrollo del feto de ninguna manera.'
   },
   {
-    question: '¿Cómo se paga?',
-    answer: country.code === 'ar'
-      ? `Aceptamos Mercado Pago (tarjetas, transferencia, efectivo en Rapipago/Pago Fácil), transferencias bancarias en pesos o dólares, y tarjetas de crédito/débito. También ofrecemos planes de pago flexibles.`
-      : country.code === 've'
-      ? `Aceptamos Zelle, PayPal, transferencia bancaria internacional en dólares, pago móvil y criptomonedas (Bitcoin, USDT). También ofrecemos planes de pago flexibles para facilitar el acceso.`
-      : 'Aceptamos pagos en línea con tarjeta de crédito o débito a través de Stripe, así como transferencias bancarias. También ofrecemos planes de pago flexibles para tu comodidad.'
-  },
-  {
     question: '¿Puedo hacerla en cualquier semana de embarazo?',
     answer: 'La prueba se puede realizar a partir de la semana 8 de gestación, cuando ya hay suficiente ADN fetal libre en la sangre materna. No hay límite superior, se puede realizar en cualquier momento del embarazo.'
   },
   {
     question: '¿Los resultados son confidenciales?',
     answer: 'Absolutamente. Mantenemos la máxima confidencialidad en todos los aspectos del proceso. Los resultados solo se entregan a la persona autorizada y utilizamos protocolos de seguridad de nivel hospitalario.'
-  },
-  {
-    question: '¿Qué incluye el precio?',
-    answer: 'El precio incluye la toma de muestra, análisis de laboratorio, certificado de resultados, envío seguro de resultados y soporte durante todo el proceso. No hay costos ocultos.'
   },
   {
     question: '¿Puedo hacer la prueba si soy menor de edad?',

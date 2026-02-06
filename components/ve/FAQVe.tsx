@@ -14,7 +14,11 @@ const faqs = [
   },
   {
     question: '¿Cuál es el precio en Venezuela?',
-    answer: 'El precio de la prueba de paternidad prenatal es de $1,800 USD. Incluye la toma de muestra, el análisis de laboratorio, el informe con validez legal y el acompañamiento de nuestros especialistas. Aceptamos pagos en dólares mediante Zelle, PayPal, transferencia bancaria internacional y criptomonedas.'
+    answer: 'El precio de la prueba de paternidad prenatal es de $1,800 USD. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas. Aceptamos pagos en dólares mediante Zelle, PayPal, transferencia bancaria internacional y criptomonedas.'
+  },
+  {
+    question: '¿Cómo puedo pagar en Venezuela?',
+    answer: 'Aceptamos Zelle, PayPal, transferencia bancaria internacional en dólares, pago móvil y criptomonedas (Bitcoin, USDT). También ofrecemos planes de pago flexibles para facilitar el acceso.'
   },
   {
     question: '¿Qué tan precisa es la prueba?',
@@ -29,12 +33,8 @@ const faqs = [
     answer: 'Sí. Solo requiere una muestra de sangre de la mamá, no es invasiva y no implica riesgos para el bebé. Puedes realizarla desde la semana 7 de embarazo de manera totalmente segura.'
   },
   {
-    question: '¿Cómo puedo pagar en Venezuela?',
-    answer: 'Aceptamos Zelle, PayPal, transferencia bancaria internacional en dólares, pago móvil y criptomonedas (Bitcoin, USDT). También ofrecemos planes de pago flexibles para facilitar el acceso.'
-  },
-  {
     question: '¿Qué incluye el precio?',
-    answer: 'Incluye la toma de muestras, el análisis de laboratorio, el informe con validez legal, la entrega segura de resultados y el acompañamiento de nuestros especialistas durante todo el proceso.'
+    answer: 'Incluye la toma de muestras, el análisis de laboratorio, la entrega segura de resultados y el acompañamiento de nuestros especialistas durante todo el proceso.'
   },
   {
     question: '¿Atienden en todo el país?',
