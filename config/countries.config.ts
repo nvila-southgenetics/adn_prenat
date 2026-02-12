@@ -55,7 +55,7 @@ export const countries: Record<string, CountryConfig> = {
     urlPrefix: '',
     flag: '🇨🇴',
     paymentMethods: ['Transferencia bancaria', 'PSE', 'Tarjetas débito/crédito', 'Nequi', 'Daviplata'],
-    businessHours: 'Todos los días 9:00 - 20:00',
+    businessHours: 'Lunes a viernes 8:00 - 18:00',
     deliveryDays: '10 días hábiles',
     terms: {
       money: 'dinero',
@@ -92,7 +92,7 @@ export const countries: Record<string, CountryConfig> = {
     urlPrefix: '/ar',
     flag: '🇦🇷',
     paymentMethods: ['Transferencia bancaria', 'Mercado Pago', 'Tarjetas débito/crédito', 'Rapipago', 'Pago Fácil'],
-    businessHours: 'Lunes a viernes 8:00 - 18:00',
+    businessHours: 'Todos los días 9:00 - 20:00',
     deliveryDays: '10 días hábiles',
     terms: {
       money: 'plata',

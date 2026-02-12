@@ -45,7 +45,7 @@ export default function HeaderAr() {
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-4">
-              <div className="bg-sky-100 px-2 py-1 rounded">
+              <div>
                 <Image
                   src="/imgs/logo.png"
                   alt="SouthGenetics - Test Paternidad Prenatal Argentina"
@@ -68,7 +68,7 @@ export default function HeaderAr() {
             </div>
             <div className="flex items-center gap-4">
               <div className="hidden md:block">
-                <span className="text-ocean-100">{country.businessHours}</span>
+                <span className="text-ocean-100">Horario: 9:00 - 20:00</span>
               </div>
               <CountrySelector currentCountry={country} variant="header" />
               {/* Botón WhatsApp para móviles */}

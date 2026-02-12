@@ -48,7 +48,7 @@ export default function Header({ country = countries.co }: HeaderProps) {
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-4">
-              <div className="bg-sky-100 px-2 py-1 rounded">
+              <div className={country.code === 'ar' ? '' : 'bg-sky-100 px-2 py-1 rounded'}>
                 <Image
                   src="/imgs/logo.png"
                   alt="SouthGenetics - Test Paternidad Prenatal - Pruebas de paternidad prenatal certificadas"
@@ -71,7 +71,9 @@ export default function Header({ country = countries.co }: HeaderProps) {
             </div>
             <div className="flex items-center gap-4">
               <div className="hidden md:block">
-                <span className="text-ocean-100">{country.businessHours}</span>
+                <span className="text-ocean-100">
+                  {country.code === 'ar' ? 'Horario: 9:00 - 20:00' : country.businessHours}
+                </span>
               </div>
               {/* Selector de país */}
               <CountrySelector currentCountry={country} variant="header" />

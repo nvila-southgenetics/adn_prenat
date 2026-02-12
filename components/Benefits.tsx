@@ -84,6 +84,14 @@ export default function Benefits({ country = countries.co }: BenefitsProps) {
                   <p className="text-ocean-100 text-base">
                     Laboratorio DDC de Estados Unidos • Entrega alrededor de 10 días
                   </p>
+                  <a
+                    href="https://dnacenter.com/paternity-testing/non-invasive-prenatal-paternity-testing/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-3 text-sm font-semibold text-white underline underline-offset-4 hover:text-ocean-100 transition-colors duration-200"
+                  >
+                    Conocer más DDC
+                  </a>
                 </div>
               </div>
               <div className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl text-gray-900 border border-gray-200">
@@ -97,6 +105,14 @@ export default function Benefits({ country = countries.co }: BenefitsProps) {
                   <p className="text-gray-600 text-base">
                     Laboratorio BGI de China • Misma seguridad en resultados • Entrega alrededor de 30 días
                   </p>
+                  <a
+                    href="https://www.bgi.com/global"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-3 text-sm font-semibold text-ocean-700 underline underline-offset-4 hover:text-ocean-800 transition-colors duration-200"
+                  >
+                    Conocer más BGI
+                  </a>
                 </div>
               </div>
             </div>

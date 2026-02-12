@@ -81,6 +81,14 @@ export default function WhatsAppModalAr({ isOpen, onClose }: WhatsAppModalProps)
                   <p className="text-sm text-gray-700 mt-1">
                     Laboratorio DDC de Estados Unidos. Entrega alrededor de 10 días.
                   </p>
+                  <a
+                    href="https://dnacenter.com/paternity-testing/non-invasive-prenatal-paternity-testing/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 text-sm font-semibold text-ocean-700 underline underline-offset-4 hover:text-ocean-800 transition-colors duration-200"
+                  >
+                    Conocer más DDC
+                  </a>
                 </div>
                 <div className="rounded-xl border border-gray-200 bg-white p-4">
                   <div className="flex items-center justify-between gap-3">
@@ -90,6 +98,14 @@ export default function WhatsAppModalAr({ isOpen, onClose }: WhatsAppModalProps)
                   <p className="text-sm text-gray-700 mt-1">
                     Laboratorio BGI de China. Los resultados son igual de seguros y demoran alrededor de 30 días.
                   </p>
+                  <a
+                    href="https://www.bgi.com/global"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 text-sm font-semibold text-ocean-700 underline underline-offset-4 hover:text-ocean-800 transition-colors duration-200"
+                  >
+                    Conocer más BGI
+                  </a>
                 </div>
               </div>
 
