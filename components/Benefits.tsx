@@ -67,23 +67,56 @@ export default function Benefits({ country = countries.co }: BenefitsProps) {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto mb-16"
+          className="max-w-4xl mx-auto mb-16"
         >
-          <div className="bg-gradient-to-r from-ocean-600 to-ocean-800 rounded-2xl p-8 md:p-10 shadow-2xl text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
-            <div className="relative z-10 text-center">
-              <div className="mb-2">
-                <span className="text-ocean-100 text-lg font-medium">Inversión única</span>
+          {country.code === 'ar' ? (
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-r from-ocean-600 to-ocean-800 rounded-2xl p-8 md:p-10 shadow-2xl text-white relative overflow-hidden border-2 border-ocean-400">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                <div className="relative z-10 text-center">
+                  <div className="mb-2">
+                    <span className="text-ocean-100 text-lg font-medium">Plan Premium</span>
+                  </div>
+                  <div className="text-4xl md:text-5xl font-bold mb-3">
+                    US$ 1,300
+                  </div>
+                  <p className="text-ocean-100 text-base">
+                    Laboratorio DDC • N.1 mundial en pruebas no invasivas • Entrega alrededor de 10 días
+                  </p>
+                </div>
               </div>
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
-                {country.priceDisplay}
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl text-gray-900 border border-gray-200">
+                <div className="text-center">
+                  <div className="mb-2">
+                    <span className="text-gray-600 text-lg font-medium">Plan BGI</span>
+                  </div>
+                  <div className="text-4xl md:text-5xl font-bold mb-3 text-ocean-700">
+                    US$ 1,150
+                  </div>
+                  <p className="text-gray-600 text-base">
+                    Laboratorio BGI • Misma seguridad en resultados • Entrega alrededor de 30 días
+                  </p>
+                </div>
               </div>
-              <p className="text-ocean-100 text-lg">
-                Todo incluido • Sin costos ocultos • Sin sorpresas
-              </p>
             </div>
-          </div>
+          ) : (
+            <div className="bg-gradient-to-r from-ocean-600 to-ocean-800 rounded-2xl p-8 md:p-10 shadow-2xl text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+              <div className="relative z-10 text-center">
+                <div className="mb-2">
+                  <span className="text-ocean-100 text-lg font-medium">Inversión única</span>
+                </div>
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+                  {country.priceDisplay}
+                </div>
+                <p className="text-ocean-100 text-lg">
+                  Todo incluido • Sin costos ocultos • Sin sorpresas
+                </p>
+              </div>
+            </div>
+          )}
         </motion.div>
 
         {/* Qué incluye */}

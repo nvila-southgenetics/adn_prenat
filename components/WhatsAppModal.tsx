@@ -83,10 +83,34 @@ export default function WhatsAppModal({ isOpen, onClose, country = countries.co 
               <div className="flex-1 overflow-y-auto p-6 md:p-8">
                 <div className="space-y-6 text-gray-700">
                   {/* Precio arriba */}
-                  <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
-                    <p className="font-semibold text-lg text-gray-900 mb-1">Precio de la prueba</p>
-                    <p className="text-ocean-700 font-bold text-xl">{country.priceDisplay}</p>
-                  </div>
+                  {country.code === 'ar' ? (
+                    <div className="space-y-3">
+                      <h3 className="font-semibold text-lg text-gray-900">Planes disponibles en Argentina</h3>
+                      <div className="rounded-xl border border-ocean-200 bg-ocean-50 p-4">
+                        <div className="flex items-center justify-between gap-3">
+                          <p className="font-bold text-ocean-800">Plan Premium (DDC)</p>
+                          <p className="font-bold text-ocean-900">US$ 1,300</p>
+                        </div>
+                        <p className="text-sm text-gray-700 mt-1">
+                          Laboratorio DDC (N.1 mundial en pruebas no invasivas). Entrega alrededor de 10 días.
+                        </p>
+                      </div>
+                      <div className="rounded-xl border border-gray-200 bg-white p-4">
+                        <div className="flex items-center justify-between gap-3">
+                          <p className="font-bold text-gray-800">Plan BGI</p>
+                          <p className="font-bold text-gray-900">US$ 1,150</p>
+                        </div>
+                        <p className="text-sm text-gray-700 mt-1">
+                          Laboratorio BGI. Los resultados son igual de seguros y demoran alrededor de 30 días.
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="bg-ocean-50 border-l-4 border-ocean-600 p-4 rounded-r-lg">
+                      <p className="font-semibold text-lg text-gray-900 mb-1">Precio de la prueba</p>
+                      <p className="text-ocean-700 font-bold text-xl">{country.priceDisplay}</p>
+                    </div>
+                  )}
 
                   <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
                     <p className="text-red-700 font-semibold leading-relaxed">

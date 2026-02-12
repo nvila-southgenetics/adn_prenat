@@ -71,6 +71,28 @@ export default function WhatsAppModalAr({ isOpen, onClose }: WhatsAppModalProps)
                 </div>
               </div>
 
+              <div className="space-y-3">
+                <h4 className="font-semibold text-gray-800">Planes disponibles en Argentina</h4>
+                <div className="rounded-xl border border-ocean-200 bg-ocean-50 p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="font-bold text-ocean-800">Plan Premium (DDC)</p>
+                    <p className="font-bold text-ocean-900">US$ 1,300</p>
+                  </div>
+                  <p className="text-sm text-gray-700 mt-1">
+                    Laboratorio DDC (N.1 mundial en pruebas no invasivas). Entrega alrededor de 10 días.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-gray-200 bg-white p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="font-bold text-gray-800">Plan BGI</p>
+                    <p className="font-bold text-gray-900">US$ 1,150</p>
+                  </div>
+                  <p className="text-sm text-gray-700 mt-1">
+                    Laboratorio BGI. Los resultados son igual de seguros y demoran alrededor de 30 días.
+                  </p>
+                </div>
+              </div>
+
               <div className="bg-gray-50 rounded-xl p-4">
                 <h4 className="font-semibold text-gray-800 mb-2">Te podemos ayudar con:</h4>
                 <ul className="space-y-2 text-sm text-gray-600">
