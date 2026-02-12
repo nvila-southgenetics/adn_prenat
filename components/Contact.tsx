@@ -138,7 +138,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                          placeholder="+57 317 364 4276"
+                          placeholder="+57 3002315914"
                   />
                 </div>
 
@@ -229,7 +229,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Teléfono</h4>
-                    <p className="text-gray-600">+57 317 364 4276</p>
+                    <p className="text-gray-600">+57 3002315914</p>
                   </div>
                 </div>
 

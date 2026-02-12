@@ -222,7 +222,7 @@ export default function ContactCo() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Teléfono</h4>
-                    <p className="text-gray-600">+57 317 364 4276</p>
+                    <p className="text-gray-600">+57 3002315914</p>
                   </div>
                 </div>
 

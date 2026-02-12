@@ -164,7 +164,7 @@ export default function FormularioPage() {
                           onChange={handleInputChange}
                           required
                           className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-ocean-500 focus:border-ocean-500 transition-all duration-200 text-lg"
-                          placeholder="+57 317 364 4276"
+                          placeholder="+57 3002315914"
                         />
                       </div>
                     </div>
