@@ -1,14 +1,18 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, MessageCircle } from 'lucide-react'
 import { countries, type CountryConfig } from '@/config/countries.config'
+import WhatsAppModal from './WhatsAppModal'
 
 interface ContactCTAProps {
   country?: CountryConfig
 }
 
 export default function ContactCTA({ country = countries.co }: ContactCTAProps) {
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
+
   return (
     <section id="contacto" className="relative py-16 bg-white overflow-hidden">
       <div className="container-custom">
@@ -28,6 +32,14 @@ export default function ContactCTA({ country = countries.co }: ContactCTAProps) 
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+            <button
+              type="button"
+              onClick={() => setShowWhatsAppModal(true)}
+              className="btn-secondary inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base"
+            >
+              <MessageCircle className="w-5 h-5" />
+              WhatsApp
+            </button>
             <a
               href={`${country.urlPrefix}/formulario`}
               className="bg-ocean-600 hover:bg-ocean-700 text-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-xl group"
@@ -38,6 +50,7 @@ export default function ContactCTA({ country = countries.co }: ContactCTAProps) 
           </div>
         </motion.div>
       </div>
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} country={country} />
     </section>
   )
 }

@@ -33,6 +33,30 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/sobre-nosotros',
+        destination: 'https://southgenetics.com/',
+        permanent: true,
+      },
+      {
+        source: '/ar/sobre-nosotros',
+        destination: 'https://southgenetics.com/',
+        permanent: true,
+      },
+      {
+        source: '/co/sobre-nosotros',
+        destination: 'https://southgenetics.com/',
+        permanent: true,
+      },
+      {
+        source: '/ve/sobre-nosotros',
+        destination: 'https://southgenetics.com/',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

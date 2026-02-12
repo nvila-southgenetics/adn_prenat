@@ -67,24 +67,15 @@ export default function FooterCo() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-4">Legal</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#privacidad" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Aviso de privacidad
-                </a>
-              </li>
-              <li>
-                <a href="#terminos" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Términos de uso
-                </a>
-              </li>
-              <li>
-                <a href="#cookies" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Política de cookies
-                </a>
-              </li>
-            </ul>
+            <p className="text-sm text-gray-400 mb-2">Cambiar país</p>
+            <div className="max-w-[180px]">
+              <a
+                href="/co"
+                className="inline-flex items-center justify-between w-full px-3 py-2 text-sm rounded-lg bg-white/10 hover:bg-white/20 text-gray-200 border border-white/20 transition-colors duration-200"
+              >
+                <span>🇨🇴 Colombia</span>
+              </a>
+            </div>
           </motion.div>
 
           <motion.div

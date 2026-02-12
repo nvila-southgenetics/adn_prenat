@@ -19,26 +19,6 @@ const getFaqs = (country: CountryConfig) => [
     answer: 'Prenatal significa “antes del nacimiento”. Nuestra prueba de paternidad prenatal se realiza mientras la mujer está embarazada, a partir de la semana 7 u 8 de gestación. No es para bebés ya nacidos ni para niños: es exclusivamente para determinar la paternidad durante el embarazo, de forma segura y no invasiva.'
   },
   {
-    question: '¿Cuál es el precio?',
-    answer: country.code === 'ar'
-      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas. Aceptamos Mercado Pago, transferencia bancaria, tarjetas y otros medios de pago locales.`
-      : country.code === 've'
-      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas. Aceptamos pagos en dólares mediante Zelle, PayPal, transferencia bancaria internacional y criptomonedas.`
-      : `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio, el certificado de resultados y el acompañamiento durante todo el proceso. No hay costos ocultos.`
-  },
-  {
-    question: '¿Cómo se paga?',
-    answer: country.code === 'ar'
-      ? `Aceptamos Mercado Pago (tarjetas, transferencia, efectivo en Rapipago/Pago Fácil), transferencias bancarias en pesos o dólares, y tarjetas de crédito/débito. También ofrecemos planes de pago flexibles.`
-      : country.code === 've'
-      ? `Aceptamos Zelle, PayPal, transferencia bancaria internacional en dólares, pago móvil y criptomonedas (Bitcoin, USDT). También ofrecemos planes de pago flexibles para facilitar el acceso.`
-      : 'Aceptamos pagos en línea con tarjeta de crédito o débito a través de Stripe, así como transferencias bancarias. También ofrecemos planes de pago flexibles para tu comodidad.'
-  },
-  {
-    question: '¿Qué incluye el precio?',
-    answer: 'El precio incluye la toma de muestra, análisis de laboratorio, certificado de resultados, envío seguro de resultados y soporte durante todo el proceso. No hay costos ocultos.'
-  },
-  {
     question: '¿Qué tan precisa es la prueba?',
     answer: 'Nuestra prueba de paternidad prenatal tiene una precisión del 99.9%, utilizando tecnología de vanguardia y análisis de ADN fetal libre en sangre materna. Es la misma tecnología utilizada en hospitales de primer nivel mundial.'
   },
@@ -59,6 +39,26 @@ const getFaqs = (country: CountryConfig) => [
   {
     question: '¿Los resultados son confidenciales?',
     answer: 'Absolutamente. Mantenemos la máxima confidencialidad en todos los aspectos del proceso. Los resultados solo se entregan a la persona autorizada y utilizamos protocolos de seguridad de nivel hospitalario.'
+  },
+  {
+    question: '¿Cuál es el precio?',
+    answer: country.code === 'ar'
+      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas. Aceptamos Mercado Pago, transferencia bancaria, tarjetas y otros medios de pago locales.`
+      : country.code === 've'
+      ? `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio y el acompañamiento de nuestros especialistas. Aceptamos pagos en dólares mediante Zelle, PayPal, transferencia bancaria internacional y criptomonedas.`
+      : `El precio de la prueba de paternidad prenatal es de ${country.priceDisplay}. Incluye la toma de muestra, el análisis de laboratorio, el certificado de resultados y el acompañamiento durante todo el proceso. No hay costos ocultos.`
+  },
+  {
+    question: '¿Cómo se paga?',
+    answer: country.code === 'ar'
+      ? `Aceptamos Mercado Pago (tarjetas, transferencia, efectivo en Rapipago/Pago Fácil), transferencias bancarias en pesos o dólares, y tarjetas de crédito/débito. También ofrecemos planes de pago flexibles.`
+      : country.code === 've'
+      ? `Aceptamos Zelle, PayPal, transferencia bancaria internacional en dólares, pago móvil y criptomonedas (Bitcoin, USDT). También ofrecemos planes de pago flexibles para facilitar el acceso.`
+      : 'Aceptamos pagos en línea con tarjeta de crédito o débito a través de Stripe, así como transferencias bancarias. También ofrecemos planes de pago flexibles para tu comodidad.'
+  },
+  {
+    question: '¿Qué incluye el precio?',
+    answer: 'El precio incluye la toma de muestra, análisis de laboratorio, certificado de resultados, envío seguro de resultados y soporte durante todo el proceso. No hay costos ocultos.'
   },
   {
     question: '¿Puedo hacer la prueba si soy menor de edad?',
@@ -166,7 +166,9 @@ export default function FAQ({ country = countries.co }: FAQProps) {
               ¿Tienes más preguntas?
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Nuestro equipo de especialistas está disponible de lunes a viernes de 8:00 a 18:00 para resolver todas tus dudas.
+              {country.code === 'ar'
+                ? 'Nuestro equipo de especialistas está disponible todos los días de 9:00 a 20:00 para resolver todas tus dudas.'
+                : 'Nuestro equipo de especialistas está disponible de lunes a viernes de 8:00 a 18:00 para resolver todas tus dudas.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button

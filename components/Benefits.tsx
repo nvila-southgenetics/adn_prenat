@@ -82,7 +82,7 @@ export default function Benefits({ country = countries.co }: BenefitsProps) {
                     US$ 1,300
                   </div>
                   <p className="text-ocean-100 text-base">
-                    Laboratorio DDC • N.1 mundial en pruebas no invasivas • Entrega alrededor de 10 días
+                    Laboratorio DDC de Estados Unidos • Entrega alrededor de 10 días
                   </p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function Benefits({ country = countries.co }: BenefitsProps) {
                     US$ 1,150
                   </div>
                   <p className="text-gray-600 text-base">
-                    Laboratorio BGI • Misma seguridad en resultados • Entrega alrededor de 30 días
+                    Laboratorio BGI de China • Misma seguridad en resultados • Entrega alrededor de 30 días
                   </p>
                 </div>
               </div>
@@ -180,8 +180,12 @@ export default function Benefits({ country = countries.co }: BenefitsProps) {
               <div className="text-ocean-100">Días hábiles para resultados</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-1">L-V</div>
-              <div className="text-ocean-100">8:00 - 18:00</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">
+                {country.code === 'ar' ? 'Todos los días' : 'L-V'}
+              </div>
+              <div className="text-ocean-100">
+                {country.code === 'ar' ? '9:00 - 20:00' : '8:00 - 18:00'}
+              </div>
             </div>
           </div>
         </motion.div>

@@ -122,12 +122,14 @@ export default function Header({ country = countries.co }: HeaderProps) {
               >
                 Precio
               </button>
-              <button 
-                onClick={() => handleNavClick('beneficios')}
-                className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
-              >
-                Beneficios
-              </button>
+              {country.code !== 'ar' && (
+                <button 
+                  onClick={() => handleNavClick('beneficios')}
+                  className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
+                >
+                  Beneficios
+                </button>
+              )}
               <button 
                 onClick={() => handleNavClick('faqs')}
                 className="text-gray-700 hover:text-ocean-600 font-medium transition-colors duration-200"
@@ -190,12 +192,14 @@ export default function Header({ country = countries.co }: HeaderProps) {
                 >
                   Precio
                 </button>
-                <button 
-                  onClick={() => handleNavClick('beneficios')}
-                  className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
-                >
-                  Beneficios
-                </button>
+                {country.code !== 'ar' && (
+                  <button 
+                    onClick={() => handleNavClick('beneficios')}
+                    className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"
+                  >
+                    Beneficios
+                  </button>
+                )}
                 <button 
                   onClick={() => handleNavClick('faqs')}
                   className="text-left text-gray-700 hover:text-ocean-600 font-medium py-2"

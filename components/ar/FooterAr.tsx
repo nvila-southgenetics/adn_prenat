@@ -68,37 +68,15 @@ export default function FooterAr() {
               </div>
             </motion.div>
 
-            {/* Enlaces legales */}
+            {/* Selector de país */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold mb-4">Legal</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#privacidad" className="text-gray-300 hover:text-white transition-colors duration-200">
-                    Aviso de privacidad
-                  </a>
-                </li>
-                <li>
-                  <a href="#terminos" className="text-gray-300 hover:text-white transition-colors duration-200">
-                    Términos de uso
-                  </a>
-                </li>
-                <li>
-                  <a href="#cookies" className="text-gray-300 hover:text-white transition-colors duration-200">
-                    Política de cookies
-                  </a>
-                </li>
-              </ul>
-
-              {/* Selector de país */}
-              <div className="mt-6">
-                <p className="text-sm text-gray-400 mb-2">Cambiar país</p>
-                <CountrySelector currentCountry={country} variant="footer" />
-              </div>
+              <p className="text-sm text-gray-400 mb-2">Cambiar país</p>
+              <CountrySelector currentCountry={country} variant="footer" />
             </motion.div>
 
             {/* Información de contacto */}

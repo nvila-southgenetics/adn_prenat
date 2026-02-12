@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { MessageCircle, Droplets, FileCheck } from 'lucide-react'
 import Image from 'next/image'
 import { smoothScrollTo } from '@/utils/smoothScroll'
-import WhatsAppModalAr from './WhatsAppModalAr'
+import WhatsAppModal from '@/components/WhatsAppModal'
 import { countries } from '@/config/countries.config'
 
 const country = countries.ar
@@ -250,7 +250,7 @@ export default function HowItWorksAr() {
         </motion.div>
       </div>
 
-      <WhatsAppModalAr isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} />
+      <WhatsAppModal isOpen={showWhatsAppModal} onClose={() => setShowWhatsAppModal(false)} country={country} />
     </section>
   )
 }

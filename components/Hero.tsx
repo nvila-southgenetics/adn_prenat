@@ -104,7 +104,7 @@ export default function Hero({ country = countries.co }: HeroProps) {
               <button
                 type="button"
                 onClick={() => setShowWhatsAppModal(true)}
-                className="btn-secondary text-center group"
+                className={`btn-secondary text-center group ${country.code === 'ar' ? 'inline-flex items-center justify-center gap-2 h-12 px-4 text-base sm:w-[220px]' : ''}`}
               >
                 <MessageCircle className="w-5 h-5 group-hover:animate-pulse" />
                 Hablar por WhatsApp
@@ -112,7 +112,7 @@ export default function Hero({ country = countries.co }: HeroProps) {
 
               <a
                 href={`${country.urlPrefix}/formulario`}
-                className="btn-outline border-ocean-600 text-ocean-600 hover:bg-ocean-600 hover:text-white text-center"
+                className={`btn-outline border-ocean-600 text-ocean-600 hover:bg-ocean-600 hover:text-white text-center ${country.code === 'ar' ? 'inline-flex items-center justify-center h-12 px-4 text-base sm:w-[220px]' : ''}`}
               >
                 Solicitar información
               </a>

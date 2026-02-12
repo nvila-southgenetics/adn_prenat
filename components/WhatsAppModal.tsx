@@ -92,7 +92,7 @@ export default function WhatsAppModal({ isOpen, onClose, country = countries.co 
                           <p className="font-bold text-ocean-900">US$ 1,300</p>
                         </div>
                         <p className="text-sm text-gray-700 mt-1">
-                          Laboratorio DDC (N.1 mundial en pruebas no invasivas). Entrega alrededor de 10 días.
+                          Laboratorio DDC de Estados Unidos. Entrega alrededor de 10 días.
                         </p>
                       </div>
                       <div className="rounded-xl border border-gray-200 bg-white p-4">
@@ -101,7 +101,7 @@ export default function WhatsAppModal({ isOpen, onClose, country = countries.co 
                           <p className="font-bold text-gray-900">US$ 1,150</p>
                         </div>
                         <p className="text-sm text-gray-700 mt-1">
-                          Laboratorio BGI. Los resultados son igual de seguros y demoran alrededor de 30 días.
+                          Laboratorio BGI de China. Los resultados son igual de seguros y demoran alrededor de 30 días.
                         </p>
                       </div>
                     </div>
